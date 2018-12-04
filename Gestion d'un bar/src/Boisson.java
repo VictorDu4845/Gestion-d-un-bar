@@ -1,26 +1,39 @@
-public class Boisson {
-	public String nom;
-	public double prix;
-	public boolean estSoft;
+public class Boisson
+{
 	
-	public void setNom(String nom) {
+	private String nom;
+	private double prix;
+	private double tva;
+	
+	public Boisson(String nom, double prix, double tva) 
+	{
 		this.nom = nom;
+		this.prix = prix;
+		this.tva = tva;
 	}
-	public String getNom() {
+
+	public String getNom() 
+	{
 		return nom;
 	}
 	
-	public void setPrix(double prix) {
-		this.prix = prix;
-	}
-	public double getPrix() {
+	public double getPrix() 
+	{
 		return prix;
 	}
 	
-	public void setEstSoft(boolean estSoft) {
-		this.estSoft = estSoft;
+	public double getTva() 
+	{
+		return tva;
 	}
-	public boolean getEstSoft() {
-		return estSoft;
+	
+	public double prixTVAC() 
+	{
+		return prix * (1 + tva);
+	}
+	
+	public String toString() 
+	{
+		return "Nom : " + nom + " Prix : " + prix + "€ TVA : " + tva + "% Prix TVAC " + prixTVAC() + "€";
 	}
 }
