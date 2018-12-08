@@ -1,8 +1,9 @@
 import java.util.EmptyStackException;
 
-public class TicketCaisse extends Object implements Cloneable
+public class TicketCaisse
 {
 	public Node head;
+	public Node tail;
 	public Node next;
 	public Node previous;
 	public int taille;
@@ -27,19 +28,29 @@ public class TicketCaisse extends Object implements Cloneable
 		}
 	}
 	
-	public void ajouter(BoissonEtendue boisson)
+	public void ajouter(BoissonEtendue b)
 	{
-		Node n = new Node (boisson, next, previous);
-		taille = taille + 1;
+		Node n = new Node (b, next, previous);
+		boolean premièreCommande = true;
+		int quantité;
 		if (head == null)
 		{
 			head = n;
+			taille = taille +1;
 		}
-		else
+		for (Node test = head; test != null; test = test.next)
 		{
-			head.previous = n;
-			n.next = head;
-			head = n;
+			if (b.getNom() == test.boisson.getNom())
+			{
+				quantité = test.boisson.getQuantité() + 1;
+				test.boisson.setQuantité(quantité);
+				premièreCommande = false;
+				break;
+			}
+			if (premièreCommande == true)
+		head.previous = n;
+		n.next = head;
+		head = n;
 		}
 	}
 	public void enleverDernierEncodage() throws EmptyStackException

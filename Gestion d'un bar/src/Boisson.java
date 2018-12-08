@@ -34,6 +34,11 @@ public class Boisson
 		return quantité;
 	}
 	
+	public void setQuantité(int quantité)
+	{
+		this.quantité = quantité;
+	}
+	
 	public double prixTotalTVAC() 
 	{
 		return quantité * prix * (1 + tva);
