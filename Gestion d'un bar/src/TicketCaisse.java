@@ -48,9 +48,11 @@ public class TicketCaisse
 				break;
 			}
 			if (premièreCommande == true)
-		head.previous = n;
-		n.next = head;
-		head = n;
+			{
+				head.previous = n;
+				n.next = head;
+				head = n;
+			}
 		}
 	}
 	public void enleverDernierEncodage() throws EmptyStackException
