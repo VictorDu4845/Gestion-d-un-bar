@@ -10,8 +10,12 @@ public class Main {
 		victor.ajouter(coca);
 		victor.ajouter(coca);
 		victor.ajouter(sprite);
+		victor.ajouter(binouze);
+		victor.ajouter(binouze);
 		victor.afficherTicket();
 		System.out.println(victor.head.boisson.getNom()+victor.head.boisson.getQuantité());
 		System.out.println(victor.head.next.boisson.getNom()+victor.head.next.boisson.getQuantité());
+		System.out.println(victor.head.next.next.boisson.getNom()+victor.head.next.next.boisson.getQuantité());
+
 	}
 }

@@ -46,6 +46,6 @@ public class Boisson
 	
 	public String toString() 
 	{
-		return "Nom : " + nom + "\n" +  "Prix : " + prix + "€" + "\n" + "TVA : " + 100*tva + "%" + "\n" + "Quantité : " + quantité + "\n" + "Prix Total TVAC " + prixTotalTVAC() + "€" + "\n";
+		return "Nom : " + nom + "\n" +  "Prix : " + prix + "€" + "\n" + "TVA : " + 100*tva + "%" + "\n" + "Quantité : " + quantité + "\n" + "Prix Total TVAC " + prixTotalTVAC() + "€" + "\n" + "\n";
 	}
 }

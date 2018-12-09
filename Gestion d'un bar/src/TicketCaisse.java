@@ -32,32 +32,30 @@ public class TicketCaisse
 	{
 		Node n = new Node (b, next, previous);
 		boolean premièreCommande = true;
-		int quantité;
 		if (head == null)
 		{
-			head = n;
+			head = tail = n;
 			taille = taille +1;
+			return;
 		}
 		for (Node test = head; test != null; test = test.next)
 		{
-			if (b.getNom() == test.boisson.getNom())
+			if ((String)b.getNom() == (String)test.boisson.getNom())
 			{
-				quantité = test.boisson.getQuantité() + 1;
-				test.boisson.setQuantité(quantité);
 				premièreCommande = false;
-				break;
+				test.boisson.setQuantité(test.boisson.getQuantité()+1);
 			}
-			if (premièreCommande == true)
-			{
-				head.previous = n;
-				n.next = head;
-				head = n;
-			}
+		}
+		if (premièreCommande == true)
+		{
+	        tail.next = n;
+	        tail = n;
+			taille = taille +1;
 		}
 	}
 	public void enleverDernierEncodage() throws EmptyStackException
 	{
-		if (this.head == null)
+		if (this.estVide())
 		{
 			throw new EmptyStackException();
 		}
@@ -72,7 +70,7 @@ public class TicketCaisse
 	{
 		Node courant = this.head;
 		double montantTotal = 0;
-		String ticket = "Impression du ticket" + "\n";
+		String ticket = "Impression du ticket" + "\n" + "\n";
 		if (this.estVide())
 		{
 			throw new EmptyStackException();
@@ -86,7 +84,7 @@ public class TicketCaisse
 	             courant = courant.next;
 				}
 		}
-		ticket = ticket + "\n" + "Pour un montant total de : " + montantTotal + " €" + "\n" + "Impression terminée" + "\n";
+		ticket = ticket + "Pour un montant total de : " + montantTotal + " €" + "\n" + "Impression terminée" + "\n";
 		System.out.println(ticket);
 	}
 	
