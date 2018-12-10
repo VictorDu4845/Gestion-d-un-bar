@@ -1,7 +1,7 @@
 public class Boisson
 {
 	
-	private String nom;
+	public String nom;
 	private double prix;
 	private double tva;
 	private int quantité;
@@ -39,13 +39,14 @@ public class Boisson
 		this.quantité = quantité;
 	}
 	
-	public double prixTotalTVAC() 
+	public double getPrixTotalTVAC() 
 	{
-		return quantité * prix * (1 + tva);
+		int a = (int) Math.round(100 * quantité * prix);
+		return (double) a/100;
 	}
 	
 	public String toString() 
 	{
-		return "Nom : " + nom + "\n" +  "Prix : " + prix + "€" + "\n" + "TVA : " + 100*tva + "%" + "\n" + "Quantité : " + quantité + "\n" + "Prix Total TVAC " + prixTotalTVAC() + "€" + "\n" + "\n";
+		return "Nom : " + nom + "\n" +  "Prix unitaire : " + getPrix() + "€" + "\n" + "TVA : " + 100*tva + "%" + "\n" + "Quantité : " + quantité + "\n" + "Prix Total TVAC " + getPrixTotalTVAC() + "€" + "\n" + "\n";
 	}
 }

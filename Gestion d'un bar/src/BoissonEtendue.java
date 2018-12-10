@@ -6,7 +6,7 @@ public class BoissonEtendue extends Boisson
 	public BoissonEtendue(String nom, double prix, double tva, int quantité) 
 	{
 		super(nom, prix, tva, quantité);
-		enregistrable = PRIX_MINIMUM < super.prixTotalTVAC();
+		enregistrable = PRIX_MINIMUM < super.getPrixTotalTVAC();
 	}
 
 	public boolean estEnregistrable() 

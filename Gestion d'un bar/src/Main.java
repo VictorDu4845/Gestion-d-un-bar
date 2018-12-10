@@ -1,21 +1,16 @@
 public class Main {
 	public static void main(String[] args) 
 	{
-		BoissonEtendue coca = new BoissonEtendue ("Coca", 1, 0.00, 1);
-		BoissonEtendue sprite = new BoissonEtendue ("Sprite", 1, 0.00, 1);
-		BoissonEtendue binouze = new BoissonEtendue ("Bière", 2, 0.00, 1);
-		System.out.println("On passe maintenant aux tickets de caisse" + "\n");
-		TicketCaisse victor = new TicketCaisse();
-		victor.ajouter(coca);
-		victor.ajouter(coca);
-		victor.ajouter(coca);
-		victor.ajouter(sprite);
-		victor.ajouter(binouze);
-		victor.ajouter(binouze);
-		victor.afficherTicket();
-		System.out.println(victor.head.boisson.getNom()+victor.head.boisson.getQuantité());
-		System.out.println(victor.head.next.boisson.getNom()+victor.head.next.boisson.getQuantité());
-		System.out.println(victor.head.next.next.boisson.getNom()+victor.head.next.next.boisson.getQuantité());
-
+		BoissonEtendue coca = new BoissonEtendue ("Coca", 1.80, 0.21, 1);
+		BoissonEtendue sprite = new BoissonEtendue ("Sprite", 1.80, 0.21, 1);
+		BoissonEtendue binouze = new BoissonEtendue ("Bière", 2.00, 0.21, 1);
+		TicketCaisse v = new TicketCaisse("Victor");
+		v.ajouter(coca, 3);
+		v.ajouter(coca, 7);
+		v.ajouter(sprite, 1);
+		v.ajouter(binouze, 4);
+		v.ajouter(binouze, 7);
+		v.afficherTicket();
+		//System.out.println(v.head.next.boisson.getNom() + " " + +v.head.next.boisson.getQuantité() + "\n" + v.head.next.next.boisson.getNom() + " " + v.head.next.next.boisson.getQuantité() + "\n" + v.head.next.next.next.boisson.getNom() + " " + v.head.next.next.next.boisson.getQuantité() + "\n" + "Taille du ticket : " + v.taille);
 	}
 }

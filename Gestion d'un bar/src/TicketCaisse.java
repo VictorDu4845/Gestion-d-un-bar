@@ -8,15 +8,19 @@ public class TicketCaisse
 	public Node previous;
 	public int taille;
 	
-	public TicketCaisse()
+	public TicketCaisse(String nomDuClient)
 	{
 		this.previous = null;
-		this.next = null;
+		NomDuClient x = new NomDuClient(nomDuClient);
+		Node a =  new Node (x, next);
+		x.setNom(nomDuClient);
+		this.head = tail =  a;
 		this.taille = 0;
 	}
 	
 	public class Node
 	{
+		public NomDuClient nom;
 		public BoissonEtendue boisson;
 		public Node next;
 		public Node previous;
@@ -26,24 +30,23 @@ public class TicketCaisse
 			this.next = next;
 			this.previous = previous;
 		}
+		public Node (NomDuClient nom, Node next)
+		{
+			this.nom = nom;
+			this.next = next;
+		}
 	}
 	
-	public void ajouter(BoissonEtendue b)
+	public void ajouter(BoissonEtendue b, int x)
 	{
 		Node n = new Node (b, next, previous);
 		boolean premièreCommande = true;
-		if (head == null)
-		{
-			head = tail = n;
-			taille = taille +1;
-			return;
-		}
-		for (Node test = head; test != null; test = test.next)
+		for (Node test = head.next; test != null; test = test.next)
 		{
 			if ((String)b.getNom() == (String)test.boisson.getNom())
 			{
 				premièreCommande = false;
-				test.boisson.setQuantité(test.boisson.getQuantité()+1);
+				test.boisson.setQuantité(test.boisson.getQuantité() + x);
 			}
 		}
 		if (premièreCommande == true)
@@ -51,6 +54,7 @@ public class TicketCaisse
 	        tail.next = n;
 	        tail = n;
 			taille = taille +1;
+			n.boisson.setQuantité(x);
 		}
 	}
 	public void enleverDernierEncodage() throws EmptyStackException
@@ -61,16 +65,16 @@ public class TicketCaisse
 		}
 		else
 		{
-			this.head = this.head.next;
+			this.tail = this.tail.previous;
 			taille = taille -1;
 		}
 	}
 	
 	public void afficherTicket() throws EmptyStackException
 	{
-		Node courant = this.head;
+		Node courant = this.head.next;
 		double montantTotal = 0;
-		String ticket = "Impression du ticket" + "\n" + "\n";
+		String ticket = "Impression du ticket" + "\n" + "\n" + "Client : " + this.head.nom.getNom() + "\n" + "\n";
 		if (this.estVide())
 		{
 			throw new EmptyStackException();
@@ -80,11 +84,11 @@ public class TicketCaisse
 			while (courant != null)
 				{
 	             ticket = ticket + courant.boisson;
-	             montantTotal = montantTotal + courant.boisson.prixTotalTVAC();
+	             montantTotal = montantTotal + courant.boisson.getPrixTotalTVAC();
 	             courant = courant.next;
 				}
 		}
-		ticket = ticket + "Pour un montant total de : " + montantTotal + " €" + "\n" + "Impression terminée" + "\n";
+		ticket = ticket + "Vous avez " + taille + " consommations" + "\n" + "Pour un montant total de : " + (double)Math.round(montantTotal*100)/100 + " €" + "\n" + "\n" + "Impression terminée" + "\n";
 		System.out.println(ticket);
 	}
 	
@@ -95,7 +99,7 @@ public class TicketCaisse
 	
 	public boolean estVide()
 	{
-		return this.head==null;
+		return this.head.next == null;
 	}
 	
 }
