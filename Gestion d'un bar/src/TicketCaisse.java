@@ -1,4 +1,4 @@
-import java.util.EmptyStackException;
+import com.victor.exceptions.*;
 
 public class TicketCaisse
 {
@@ -37,8 +37,12 @@ public class TicketCaisse
 		}
 	}
 	
-	public void ajouter(BoissonEtendue b, int x)
+	public void ajouter(BoissonEtendue b, int x) throws QuantiteNegativeException, ListeVideException, BoissonInvalideException
 	{
+		if (x < 0)
+		{
+			throw new QuantiteNegativeException ("La quantité de boissons que vous voulez ajouter est négative");
+		}
 		Node n = new Node (b, next, previous);
 		boolean premièreCommande = true;
 		for (Node test = head.next; test != null; test = test.next)
@@ -56,28 +60,78 @@ public class TicketCaisse
 			taille = taille +1;
 			n.boisson.setQuantité(x);
 		}
-	}
-	public void enleverDernierEncodage() throws EmptyStackException
-	{
-		if (this.estVide())
-		{
-			throw new EmptyStackException();
-		}
-		else
-		{
-			this.tail = this.tail.previous;
-			taille = taille -1;
-		}
+		this.afficherTicket();
 	}
 	
-	public void afficherTicket() throws EmptyStackException
+	public void enlever(BoissonEtendue b, int x) throws BoissonInvalideException, QuantiteNegativeException, ListeVideException
+	{
+		boolean dejaEncode = false;
+		if (this.head.next != null)
+		{
+			for (Node test = head.next; test != null; test = test.next)
+			{
+				if ((String)b.getNom() == (String)test.boisson.getNom())
+				{
+					dejaEncode = true;
+					test.boisson.setQuantité(test.boisson.getQuantité() - x);
+					if (test.boisson.getQuantité() == 0)
+					{
+						if (test.next == null)
+						{
+							test = null;
+						}
+						else
+						{
+							test = test.next;
+						}
+					}
+					else if (test.boisson.getQuantité() < 0)
+					{
+						throw new QuantiteNegativeException ("Vous essayez d'enlever plus de boissons qu'il n'y en a sur le ticket");
+					}
+				}
+			}
+		}
+		else if (this.head.next == null)
+		{
+			Node test = head.next;
+			if ((String)b.getNom() == (String)test.boisson.getNom())
+			{
+				dejaEncode = true;
+				test.boisson.setQuantité(test.boisson.getQuantité() - x);
+				if (test.boisson.getQuantité() == 0)
+				{
+					if (test.next == null)
+					{
+						head.next = null;
+					}
+					else
+					{
+						test = test.next;
+					}
+				}
+				else if (test.boisson.getQuantité() < 0)
+				{
+					throw new QuantiteNegativeException ("Vous essayez d'enlever plus de boissons qu'il n'y en a sur le ticket");
+				}
+			}
+		}
+		if (dejaEncode == false) 
+		{
+			throw new BoissonInvalideException ("La boisson que vous essayez d'enlever n'existe pas sur le ticket");
+		}
+		this.afficherTicket();
+	}
+	
+	public void afficherTicket() throws ListeVideException
 	{
 		Node courant = this.head.next;
 		double montantTotal = 0;
 		String ticket = "Impression du ticket" + "\n" + "\n" + "Client : " + this.head.nom.getNom() + "\n" + "\n";
 		if (this.estVide())
 		{
-			throw new EmptyStackException();
+			System.out.println(ticket + "\n" + "Nom : ... \nPrix unitaire : 0€ \nTVA : 0% \nQuantité : 0 \nPrix Total TVAC : 0€ \n\n" + "Vous avez " + taille + " consommations" + "\n" + "Pour un montant total de : 0.00 €" + "\n" + "\n" + "Impression terminée" + "\n" + "-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_" + "\n");
+			throw new ListeVideException ("Le ticket est vide, veuillez en recréer un si vous désirez ajouter des consommations à ce client");
 		}
 		else
 		{
@@ -88,7 +142,7 @@ public class TicketCaisse
 	             courant = courant.next;
 				}
 		}
-		ticket = ticket + "Vous avez " + taille + " consommations" + "\n" + "Pour un montant total de : " + (double)Math.round(montantTotal*100)/100 + " €" + "\n" + "\n" + "Impression terminée" + "\n";
+		ticket = ticket + "Vous avez " + taille + " consommations" + "\n" + "Pour un montant total de : " + (double)Math.round(montantTotal*100)/100 + " €" + "\n" + "\n" + "Impression terminée" + "\n" + "-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_" + "\n";
 		System.out.println(ticket);
 	}
 	

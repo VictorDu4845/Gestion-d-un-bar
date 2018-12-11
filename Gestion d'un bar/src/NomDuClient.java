@@ -16,4 +16,8 @@ public class NomDuClient
 	{
 		return nom;
 	}
+	public String toString()
+	{
+		return "Nom du client : " + nom;
+	}
 }
