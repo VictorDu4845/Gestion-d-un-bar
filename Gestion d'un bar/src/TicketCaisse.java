@@ -66,41 +66,46 @@ public class TicketCaisse
 	public void enlever(BoissonEtendue b, int x) throws BoissonInvalideException, QuantiteNegativeException, ListeVideException
 	{
 		boolean dejaEncode = false;
-		if (this.next != null)
+		Node test = this.head.next;
+		if (test.next != null)
 		{
-			for (Node test = head.next; test != null; test = test.next)
+			while (test != null && test.next != null)
 			{
-				if ((String)b.getNom() == (String)test.boisson.getNom())
+				if (test.boisson.getNom().toString().equals(b.getNom()))
 				{
 					dejaEncode = true;
 					test.boisson.setQuantité(test.boisson.getQuantité() - x);
 					if (test.boisson.getQuantité() == 0)
 					{
+						taille = taille -1;
 						if (test.next == null)
 						{
 							test = null;
 						}
 						else
 						{
-							test = test.next;
+							previous = test;
+							previous.next = test.next;
 						}
+						break;
 					}
 					else if (test.boisson.getQuantité() < 0)
 					{
 						throw new QuantiteNegativeException ("Vous essayez d'enlever plus de boissons qu'il n'y en a sur le ticket");
 					}
 				}
+				test = test.next;
 			}
 		}
-		else if (this.next == null)
+		else if (test.next == null)
 		{
-			Node test = head.next;
-			if ((String)b.getNom() == (String)test.boisson.getNom())
+			if (b.getNom().toString().equals((String)test.boisson.getNom()))
 			{
 				dejaEncode = true;
 				test.boisson.setQuantité(test.boisson.getQuantité() - x);
 				if (test.boisson.getQuantité() == 0)
 				{
+					taille = taille -1;
 					if (test.next == null)
 					{
 						head.next = null;
@@ -142,7 +147,7 @@ public class TicketCaisse
 	             courant = courant.next;
 				}
 		}
-		ticket = ticket + "Vous avez " + taille + " consommations" + "\n" + "Pour un montant total de : " + (double)Math.round(montantTotal*100)/100 + " €" + "\n" + "\n" + "Impression terminée" + "\n" + "-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_" + "\n";
+		ticket = ticket + "Vous avez " + taille + " consommation(s) différente(s)" + "\n" + "Pour un montant total de : " + (double)Math.round(montantTotal*100)/100 + " €" + "\n" + "\n" + "Impression terminée" + "\n" + "-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_" + "\n";
 		System.out.println(ticket);
 	}
 	
