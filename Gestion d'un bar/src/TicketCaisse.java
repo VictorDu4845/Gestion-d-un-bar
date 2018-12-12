@@ -49,6 +49,10 @@ public class TicketCaisse
 		{
 			if ((String)b.getNom() == (String)test.boisson.getNom())
 			{
+				if (test.boisson.getQuantité() == 0)
+				{
+					taille = taille + 1;
+				}
 				premièreCommande = false;
 				test.boisson.setQuantité(test.boisson.getQuantité() + x);
 			}
@@ -69,7 +73,7 @@ public class TicketCaisse
 		Node test = this.head.next;
 		if (test.next != null)
 		{
-			while (test != null && test.next != null)
+			while (test != null)
 			{
 				if (test.boisson.getNom().toString().equals(b.getNom()))
 				{
