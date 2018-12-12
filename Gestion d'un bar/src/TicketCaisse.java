@@ -66,7 +66,7 @@ public class TicketCaisse
 	public void enlever(BoissonEtendue b, int x) throws BoissonInvalideException, QuantiteNegativeException, ListeVideException
 	{
 		boolean dejaEncode = false;
-		if (this.head.next != null)
+		if (this.next != null)
 		{
 			for (Node test = head.next; test != null; test = test.next)
 			{
@@ -92,7 +92,7 @@ public class TicketCaisse
 				}
 			}
 		}
-		else if (this.head.next == null)
+		else if (this.next == null)
 		{
 			Node test = head.next;
 			if ((String)b.getNom() == (String)test.boisson.getNom())
@@ -131,7 +131,7 @@ public class TicketCaisse
 		if (this.estVide())
 		{
 			System.out.println(ticket + "\n" + "Nom : ... \nPrix unitaire : 0€ \nTVA : 0% \nQuantité : 0 \nPrix Total TVAC : 0€ \n\n" + "Vous avez " + taille + " consommations" + "\n" + "Pour un montant total de : 0.00 €" + "\n" + "\n" + "Impression terminée" + "\n" + "-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_" + "\n");
-			throw new ListeVideException ("Le ticket est vide, veuillez en recréer un si vous désirez ajouter des consommations à ce client");
+			throw new ListeVideException ("Le ticket est vide, veuillez en recréer un si vous désirez ajouter des consommations à un client");
 		}
 		else
 		{

@@ -12,9 +12,10 @@ public class Main {
 		try
 		{
 			v.ajouter(coca, 3);
+			v.ajouter(sprite, 1);
 			v.enlever(coca, 3);
 			//v.ajouter(coca, 2);
-			//v.ajouter(sprite, 1);
+			v.enlever(sprite, 1);
 			//v.ajouter(binouze, 4);
 			//v.ajouter(binouze, 7);
 			//v.enlever(coca, 4);
