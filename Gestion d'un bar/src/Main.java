@@ -1,6 +1,4 @@
-import com.victor.exceptions.QuantiteNegativeException;
-import com.victor.exceptions.BoissonInvalideException;
-import com.victor.exceptions.ListeVideException;
+import com.victor.exceptions.*;
 
 public class Main {
 	public static void main(String[] args) 

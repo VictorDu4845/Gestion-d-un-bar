@@ -1,4 +1,5 @@
 import com.victor.exceptions.*;
+import java.util.*;
 
 public class TicketCaisse
 {
@@ -88,8 +89,7 @@ public class TicketCaisse
 						}
 						else
 						{
-							previous = test;
-							previous.next = test.next;
+							test = test.next;
 						}
 						break;
 					}
