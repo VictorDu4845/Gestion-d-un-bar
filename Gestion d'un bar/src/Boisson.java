@@ -2,14 +2,14 @@ public class Boisson
 {
 	
 	public String nom;
-	private double prix;
+	private double prixTVAC;
 	private double tva;
 	private int quantité;
 	
-	public Boisson(String nom, double prix, double tva, int quantité) 
+	public Boisson(String nom, double prixTVAC, double tva, int quantité) 
 	{
 		this.nom = nom;
-		this.prix = prix;
+		this.prixTVAC = prixTVAC;
 		this.tva = tva;
 		this.quantité = quantité;
 	}
@@ -21,7 +21,7 @@ public class Boisson
 	
 	public double getPrix() 
 	{
-		return prix;
+		return prixTVAC;
 	}
 	
 	public double getTva() 
@@ -41,7 +41,7 @@ public class Boisson
 	
 	public double getPrixTotalTVAC() 
 	{
-		int a = (int) Math.round(100 * quantité * prix);
+		int a = (int) Math.round(100 * quantité * prixTVAC);
 		return (double) a/100;
 	}
 	

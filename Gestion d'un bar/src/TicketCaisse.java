@@ -1,5 +1,4 @@
 import com.victor.exceptions.*;
-import java.util.*;
 
 public class TicketCaisse
 {

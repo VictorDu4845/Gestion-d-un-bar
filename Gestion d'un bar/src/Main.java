@@ -7,6 +7,7 @@ public class Main {
 		BoissonEtendue sprite = new BoissonEtendue ("Sprite", 1.80, 0.21, 1);
 		BoissonEtendue biere = new BoissonEtendue ("Bière", 2.00, 0.21, 1);
 		TicketCaisse v = new TicketCaisse("Victor");
+		TicketCaisse y = new TicketCaisse("Victor");
 		try
 		{
 			v.ajouter(coca, 1);
@@ -27,6 +28,6 @@ public class Main {
 		{
 			System.err.println(e.getMessage());
 		}
-		//System.out.println(v.head.nom);
+		System.out.println(v.head.nom);
 	}
 }
