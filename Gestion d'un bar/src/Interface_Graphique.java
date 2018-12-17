@@ -49,7 +49,7 @@ public class Interface_Graphique{
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 450, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JPanel panel = new JPanel();
@@ -66,7 +66,7 @@ public class Interface_Graphique{
 		textField.setColumns(10);
 		
 		JLabel lblChoisissezSaTable = new JLabel("Choisissez sa table");
-		lblChoisissezSaTable.setBounds(10, 57, 120, 14);
+		lblChoisissezSaTable.setBounds(10, 61, 120, 14);
 		panel.add(lblChoisissezSaTable);
 		
 		ButtonGroup bg1 = new ButtonGroup( );
@@ -204,7 +204,11 @@ public class Interface_Graphique{
 				}
 			}
 		});
-		btnNewButton.setBounds(10, 227, 130, 23);
+		btnNewButton.setBounds(10, 190, 130, 23);
 		panel.add(btnNewButton);
+		
+		JLabel lblNewLabel = new JLabel("Liste des Clients :");
+		lblNewLabel.setBounds(10, 224, 130, 14);
+		panel.add(lblNewLabel);
 	}
 }
