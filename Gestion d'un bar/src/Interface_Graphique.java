@@ -12,12 +12,18 @@ import javax.swing.JRadioButton;
 import javax.swing.ButtonGroup;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.UIManager;
 
 public class Interface_Graphique{
 
-	private JFrame frame;
+	public JFrame frame;
 	private JTextField textField;
 	public boolean table1 = false;
+	public void setTable1(boolean table1)
+	{
+		this.table1 = table1;
+	}
+	
 	public boolean table2 = false;
 	public boolean table3 = false;
 	public boolean table4 = false;
@@ -26,7 +32,62 @@ public class Interface_Graphique{
 	public boolean table7 = false;
 	public boolean table8 = false;
 	public boolean table9 = false;
-
+	
+	public static String nom1 ="";
+	public String getNom1()
+	{
+		return nom1;
+	}
+	
+	public String nom2 ="";
+	public String getNom2()
+	{
+		return nom2;
+	}
+	
+	public String nom3 ="";
+	public String getNom3()
+	{
+		return nom3;
+	}
+	
+	public String nom4 ="";
+	public String getNom4()
+	{
+		return nom4;
+	}
+	
+	public String nom5 ="";
+	public String getNom5()
+	{
+		return nom5;
+	}
+	
+	public String nom6 ="";
+	public String getNom6()
+	{
+		return nom6;
+	}
+	
+	public String nom7 ="";
+	public String getNom7()
+	{
+		return nom7;
+	}
+	
+	public String nom8 ="";
+	public String getNom8()
+	{
+		return nom8;
+	}
+	
+	public String nom9 ="";
+	
+	public String getNom9()
+	{
+		return nom9;
+	}
+	
 	/**
 	 * Launch the application.
 	 */
@@ -55,7 +116,7 @@ public class Interface_Graphique{
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 420);
+		frame.setBounds(100, 100, 550, 420);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JPanel panel = new JPanel();
@@ -63,12 +124,12 @@ public class Interface_Graphique{
 		frame.getContentPane().add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 		
-		JLabel lblTapezLeNom = new JLabel("Tapez le nom du Client");
-		lblTapezLeNom.setBounds(10, 11, 130, 14);
+		JLabel lblTapezLeNom = new JLabel("Inscrivez le nom du Client");
+		lblTapezLeNom.setBounds(10, 11, 201, 14);
 		panel.add(lblTapezLeNom);
 		
 		textField = new JTextField("");
-		textField.setBounds(160, 8, 120, 20);
+		textField.setBounds(157, 8, 120, 20);
 		panel.add(textField);
 		textField.setColumns(10);
 		
@@ -79,54 +140,63 @@ public class Interface_Graphique{
 		ButtonGroup bg1 = new ButtonGroup( );
 		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("Table 1");
+		rdbtnNewRadioButton.setForeground(Color.BLACK);
 		rdbtnNewRadioButton.setBackground(Color.PINK);
 		rdbtnNewRadioButton.setBounds(10, 83, 109, 23);
 		panel.add(rdbtnNewRadioButton);
 		bg1.add(rdbtnNewRadioButton);
 		
 		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Table 2");
+		rdbtnNewRadioButton_1.setForeground(Color.BLACK);
 		rdbtnNewRadioButton_1.setBackground(Color.PINK);
 		rdbtnNewRadioButton_1.setBounds(10, 109, 109, 23);
 		panel.add(rdbtnNewRadioButton_1);
 		bg1.add(rdbtnNewRadioButton_1);
 		
 		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("Table 3");
+		rdbtnNewRadioButton_2.setForeground(Color.BLACK);
 		rdbtnNewRadioButton_2.setBackground(Color.PINK);
 		rdbtnNewRadioButton_2.setBounds(10, 135, 109, 23);
 		panel.add(rdbtnNewRadioButton_2);
 		bg1.add(rdbtnNewRadioButton_2);
 		
 		JRadioButton rdbtnNewRadioButton_3 = new JRadioButton("Table 4");
+		rdbtnNewRadioButton_3.setForeground(Color.BLACK);
 		rdbtnNewRadioButton_3.setBackground(Color.PINK);
 		rdbtnNewRadioButton_3.setBounds(121, 83, 109, 23);
 		panel.add(rdbtnNewRadioButton_3);
 		bg1.add(rdbtnNewRadioButton_3);
 		
 		JRadioButton rdbtnNewRadioButton_4 = new JRadioButton("Table 5");
+		rdbtnNewRadioButton_4.setForeground(Color.BLACK);
 		rdbtnNewRadioButton_4.setBackground(Color.PINK);
 		rdbtnNewRadioButton_4.setBounds(121, 109, 109, 23);
 		panel.add(rdbtnNewRadioButton_4);
 		bg1.add(rdbtnNewRadioButton_4);
 		
 		JRadioButton rdbtnNewRadioButton_5 = new JRadioButton("Table 6");
+		rdbtnNewRadioButton_5.setForeground(Color.BLACK);
 		rdbtnNewRadioButton_5.setBackground(Color.PINK);
 		rdbtnNewRadioButton_5.setBounds(121, 135, 109, 23);
 		panel.add(rdbtnNewRadioButton_5);
 		bg1.add(rdbtnNewRadioButton_5);
 		
 		JRadioButton rdbtnNewRadioButton_6 = new JRadioButton("Table 7");
+		rdbtnNewRadioButton_6.setForeground(Color.BLACK);
 		rdbtnNewRadioButton_6.setBackground(Color.PINK);
 		rdbtnNewRadioButton_6.setBounds(232, 83, 109, 23);
 		panel.add(rdbtnNewRadioButton_6);
 		bg1.add(rdbtnNewRadioButton_6);
 		
 		JRadioButton rdbtnNewRadioButton_7 = new JRadioButton("Table 8");
+		rdbtnNewRadioButton_7.setForeground(Color.BLACK);
 		rdbtnNewRadioButton_7.setBackground(Color.PINK);
 		rdbtnNewRadioButton_7.setBounds(232, 109, 109, 23);
 		panel.add(rdbtnNewRadioButton_7);
 		bg1.add(rdbtnNewRadioButton_7);
 		
 		JRadioButton rdbtnNewRadioButton_8 = new JRadioButton("Table 9");
+		rdbtnNewRadioButton_8.setForeground(Color.BLACK);
 		rdbtnNewRadioButton_8.setBackground(Color.PINK);
 		rdbtnNewRadioButton_8.setBounds(232, 135, 109, 23);
 		panel.add(rdbtnNewRadioButton_8);
@@ -142,115 +212,115 @@ public class Interface_Graphique{
 		
 		JButton btnNewButton_1 = new JButton("Vide");
 		btnNewButton_1.setEnabled(false);
-		btnNewButton_1.setBounds(66, 245, 89, 23);
+		btnNewButton_1.setBounds(58, 245, 89, 23);
 		panel.add(btnNewButton_1);
 		btnNewButton_1.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				
+				Table_1 fenetre_1 = new Table_1();
 		}
 		});
 		
 		JButton btnNewButton_2 = new JButton("Vide");
 		btnNewButton_2.setEnabled(false);
-		btnNewButton_2.setBounds(66, 270, 89, 23);
+		btnNewButton_2.setBounds(58, 270, 89, 23);
 		panel.add(btnNewButton_2);
 		btnNewButton_2.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				
+				Table_2 fenetre_2 = new Table_2();
 		}
 		});
 		
 		JButton btnNewButton_3 = new JButton("Vide");
 		btnNewButton_3.setEnabled(false);
-		btnNewButton_3.setBounds(66, 295, 89, 23);
+		btnNewButton_3.setBounds(58, 295, 89, 23);
 		panel.add(btnNewButton_3);
 		btnNewButton_3.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				
+				Table_3 fenetre_3 = new Table_3();
 		}
 		});
 		
 		JButton btnNewButton_4 = new JButton("Vide");
 		btnNewButton_4.setEnabled(false);
-		btnNewButton_4.setBounds(66, 320, 89, 23);
+		btnNewButton_4.setBounds(58, 320, 89, 23);
 		panel.add(btnNewButton_4);
 		btnNewButton_4.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				
+				Table_4 fenetre_4 = new Table_4();
 		}
 		});
 		
 		JButton btnNewButton_5 = new JButton("Vide");
 		btnNewButton_5.setEnabled(false);
-		btnNewButton_5.setBounds(66, 345, 89, 23);
+		btnNewButton_5.setBounds(58, 345, 89, 23);
 		panel.add(btnNewButton_5);
 		btnNewButton_5.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				
+				Table_5 fenetre_5 = new Table_5();
 		}
 		});
 		
 		JButton btnNewButton_6 = new JButton("Vide");
 		btnNewButton_6.setEnabled(false);
-		btnNewButton_6.setBounds(280, 245, 89, 23);
+		btnNewButton_6.setBounds(272, 245, 89, 23);
 		panel.add(btnNewButton_6);
 		btnNewButton_6.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				
+				Table_6 fenetre_6 = new Table_6();
 		}
 		});
 		
 		JButton btnNewButton_7 = new JButton("Vide");
 		btnNewButton_7.setEnabled(false);
-		btnNewButton_7.setBounds(280, 270, 89, 23);
+		btnNewButton_7.setBounds(272, 270, 89, 23);
 		panel.add(btnNewButton_7);
 		btnNewButton_7.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				
+				Table_7 fenetre_7 = new Table_7();
 		}
 		});
 		
 		JButton btnNewButton_8 = new JButton("Vide");
 		btnNewButton_8.setEnabled(false);
-		btnNewButton_8.setBounds(280, 295, 89, 23);
+		btnNewButton_8.setBounds(272, 295, 89, 23);
 		panel.add(btnNewButton_8);
 		btnNewButton_8.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				
+				Table_8 fenetre_8 = new Table_8();
 		}
 		});
 		
 		JButton btnNewButton_9 = new JButton("Vide");
 		btnNewButton_9.setEnabled(false);
-		btnNewButton_9.setBounds(280, 320, 89, 23);
+		btnNewButton_9.setBounds(272, 320, 89, 23);
 		panel.add(btnNewButton_9);
 		btnNewButton_9.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				
+				Table_9 fenetre_9 = new Table_9();
 		}
 		});
 		
 		JButton btnNewButton = new JButton("Ajouter le Client");
 		btnNewButton.setForeground(Color.BLACK);
-		btnNewButton.setBackground(Color.WHITE);
+		btnNewButton.setBackground(UIManager.getColor("Button.background"));
 		btnNewButton.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
@@ -276,6 +346,7 @@ public class Interface_Graphique{
 							TicketCaisse t1 = new TicketCaisse(nom);
 							btnNewButton_1.setText(nom);
 							btnNewButton_1.setEnabled(true);
+							nom1 = nom;
 							table1 = true;
 						}
 						else
@@ -294,6 +365,7 @@ public class Interface_Graphique{
 							TicketCaisse t2 = new TicketCaisse(nom);
 							btnNewButton_2.setText(nom);
 							btnNewButton_2.setEnabled(true);
+							nom2 = nom;
 							table2 = true;
 						}
 						else
@@ -312,6 +384,7 @@ public class Interface_Graphique{
 							TicketCaisse t3 = new TicketCaisse(nom);
 							btnNewButton_3.setText(nom);
 							btnNewButton_3.setEnabled(true);
+							nom3 = nom;
 							table3 = true;
 						}
 						else
@@ -330,6 +403,7 @@ public class Interface_Graphique{
 							TicketCaisse t4 = new TicketCaisse(nom);
 							btnNewButton_4.setText(nom);
 							btnNewButton_4.setEnabled(true);
+							nom4 = nom;
 							table4 = true;
 						}
 						else
@@ -348,6 +422,7 @@ public class Interface_Graphique{
 							TicketCaisse t5 = new TicketCaisse(nom);
 							btnNewButton_5.setText(nom);
 							btnNewButton_5.setEnabled(true);
+							nom5 =nom;
 							table5 = true;
 						}
 						else
@@ -367,6 +442,7 @@ public class Interface_Graphique{
 							TicketCaisse t6 = new TicketCaisse(nom);
 							btnNewButton_6.setText(nom);
 							btnNewButton_6.setEnabled(true);
+							nom6 = nom;
 							table6 = true;
 						}
 						else
@@ -386,6 +462,7 @@ public class Interface_Graphique{
 							TicketCaisse t7 = new TicketCaisse(nom);
 							btnNewButton_7.setText(nom);
 							btnNewButton_7.setEnabled(true);
+							nom7 = nom;
 							table7 = true;
 						}
 						else
@@ -405,6 +482,7 @@ public class Interface_Graphique{
 							TicketCaisse t8 = new TicketCaisse(nom);
 							btnNewButton_8.setText(nom);
 							btnNewButton_8.setEnabled(true);
+							nom8 = nom;
 							table5 = true;
 						}
 						else
@@ -424,6 +502,7 @@ public class Interface_Graphique{
 							TicketCaisse t9 = new TicketCaisse(nom);
 							btnNewButton_9.setText(nom);
 							btnNewButton_9.setEnabled(true);
+							nom9 = nom;
 							table9 = true;
 						}
 						else
@@ -444,11 +523,11 @@ public class Interface_Graphique{
 				}
 			}
 		});
-		btnNewButton.setBounds(10, 190, 130, 23);
+		btnNewButton.setBounds(347, 83, 130, 23);
 		panel.add(btnNewButton);
 		
-		JLabel lblNewLabel = new JLabel("Liste des Clients, cliquez sur un bouton pour acc\u00E9der au Client");
-		lblNewLabel.setBounds(10, 224, 359, 14);
+		JLabel lblNewLabel = new JLabel("Cliquez sur un bouton pour acc\u00E9der au Client ou sur X pour supprimer son compte");
+		lblNewLabel.setBounds(10, 224, 465, 14);
 		panel.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("Table 1 :");
@@ -486,5 +565,169 @@ public class Interface_Graphique{
 		JLabel lblNewLabel_9 = new JLabel("Table 9 :");
 		lblNewLabel_9.setBounds(224, 324, 85, 14);
 		panel.add(lblNewLabel_9);
+		
+		JButton btnSupprimer_1 = new JButton("X");
+		btnSupprimer_1.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnSupprimer_1.setForeground(Color.BLACK);
+		btnSupprimer_1.setBounds(157, 245, 54, 23);
+		panel.add(btnSupprimer_1);
+		btnSupprimer_1.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				btnNewButton_1.setText("Vide");
+				btnNewButton_1.setEnabled(false);
+				table1 = false;
+		}
+		});
+		
+		JButton btnSupprimer_2 = new JButton("X");
+		btnSupprimer_2.setForeground(Color.BLACK);
+		btnSupprimer_2.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnSupprimer_2.setBounds(157, 270, 54, 23);
+		panel.add(btnSupprimer_2);
+		btnSupprimer_2.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				btnNewButton_2.setText("Vide");
+				btnNewButton_2.setEnabled(false);
+				table2 = false;
+		}
+		});
+		
+		JButton btnSupprimer_3 = new JButton("X");
+		btnSupprimer_3.setForeground(Color.BLACK);
+		btnSupprimer_3.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnSupprimer_3.setBounds(157, 295, 54, 23);
+		panel.add(btnSupprimer_3);
+		btnSupprimer_3.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				btnNewButton_3.setText("Vide");
+				btnNewButton_3.setEnabled(false);
+				table3 = false;
+		}
+		});
+		
+		JButton btnSupprimer_4 = new JButton("X");
+		btnSupprimer_4.setForeground(Color.BLACK);
+		btnSupprimer_4.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnSupprimer_4.setBounds(157, 320, 54, 23);
+		panel.add(btnSupprimer_4);
+		btnSupprimer_4.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				btnNewButton_4.setText("Vide");
+				btnNewButton_4.setEnabled(false);
+				table4 = false;
+		}
+		});
+		
+		JButton btnSupprimer_5 = new JButton("X");
+		btnSupprimer_5.setForeground(Color.BLACK);
+		btnSupprimer_5.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnSupprimer_5.setBounds(157, 345, 54, 23);
+		panel.add(btnSupprimer_5);
+		btnSupprimer_5.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				btnNewButton_5.setText("Vide");
+				btnNewButton_5.setEnabled(false);
+				table5 = false;
+		}
+		});
+		
+		JButton btnSupprimer_6 = new JButton("X");
+		btnSupprimer_6.setForeground(Color.BLACK);
+		btnSupprimer_6.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnSupprimer_6.setBounds(371, 245, 54, 23);
+		panel.add(btnSupprimer_6);
+		btnSupprimer_6.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				btnNewButton_6.setText("Vide");
+				btnNewButton_6.setEnabled(false);
+				table6 = false;
+		}
+		});
+		
+		JButton btnSupprimer_7 = new JButton("X");
+		btnSupprimer_7.setForeground(Color.BLACK);
+		btnSupprimer_7.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnSupprimer_7.setBounds(371, 270, 54, 23);
+		panel.add(btnSupprimer_7);
+		btnSupprimer_7.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				btnNewButton_7.setText("Vide");
+				btnNewButton_7.setEnabled(false);
+				table7 = false;
+		}
+		});
+		
+		JButton btnSupprimer_8 = new JButton("X");
+		btnSupprimer_8.setForeground(Color.BLACK);
+		btnSupprimer_8.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnSupprimer_8.setBounds(371, 295, 54, 23);
+		panel.add(btnSupprimer_8);
+		btnSupprimer_8.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				btnNewButton_8.setText("Vide");
+				btnNewButton_8.setEnabled(false);
+				table8 = false;
+		}
+		});
+		
+		JButton btnSupprimer_9 = new JButton("X");
+		btnSupprimer_9.setForeground(Color.BLACK);
+		btnSupprimer_9.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnSupprimer_9.setBounds(371, 320, 54, 23);
+		panel.add(btnSupprimer_9);
+		btnSupprimer_9.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				btnNewButton_9.setText("Vide");
+				btnNewButton_9.setEnabled(false);
+				table9 = false;
+		}
+		});
+		
+		JButton btnNewButton_10 = new JButton("Ouvrir le Chat");
+		btnNewButton_10.setBounds(347, 190, 176, 23);
+		panel.add(btnNewButton_10);
+		btnNewButton_10.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				Interface_Chat chat = new Interface_Chat();
+		}
+		});
+		
+		JButton btnOuvrirLeMenu = new JButton("Ouvrir le menu Boissons");
+		btnOuvrirLeMenu.setBounds(347, 164, 177, 23);
+		panel.add(btnOuvrirLeMenu);
+		btnOuvrirLeMenu.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				Liste_De_Boissons liste = new Liste_De_Boissons();
+				
+		}
+		});
+
+		
+
 	}
 }
+
+
+
