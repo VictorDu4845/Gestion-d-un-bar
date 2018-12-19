@@ -7,6 +7,7 @@ public class Main {
 		BoissonEtendue sprite = new BoissonEtendue ("Sprite", 1.80, 0.21, 1);
 		BoissonEtendue biere = new BoissonEtendue ("Bière", 2.00, 0.21, 1);
 		TicketCaisse v = new TicketCaisse("Victor");
+		System.out.println(v);
 		TicketCaisse y = new TicketCaisse("Victor");
 		try
 		{

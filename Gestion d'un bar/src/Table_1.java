@@ -10,16 +10,17 @@ import javax.swing.JLabel;
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JRadioButton;
-import javax.swing.JSpinner;
-import javax.swing.SpinnerNumberModel;
 
 import com.victor.exceptions.BoissonInvalideException;
 import com.victor.exceptions.ListeVideException;
 import com.victor.exceptions.QuantiteNegativeException;
+import javax.swing.JTextPane;
+import javax.swing.JTextField;
 
 public class Table_1 extends Liste_De_Boissons{
 
 	public JFrame frame;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -60,6 +61,10 @@ public class Table_1 extends Liste_De_Boissons{
 		frame.getContentPane().add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 		
+		JTextPane textPane = new JTextPane();
+		textPane.setBounds(10, 244, 614, 326);
+		panel.add(textPane);
+		
 		JLabel lblNewLabel = new JLabel("Table 1 :");
 		lblNewLabel.setBounds(10, 11, 100, 14);
 		panel.add(lblNewLabel);
@@ -68,29 +73,25 @@ public class Table_1 extends Liste_De_Boissons{
 		lblNewLabel_1.setBounds(10, 36, 120, 14);
 		panel.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setBounds(10, 215, 514, 155);
-		panel.add(lblNewLabel_2);
-		
-		JSpinner spinner = new JSpinner();
-		spinner.setModel(new SpinnerNumberModel(new Integer(1), new Integer(0), null, new Integer(1)));
-		spinner.setBounds(269, 117, 48, 20);
-		panel.add(spinner);
-		
 		JRadioButton rdbtnAjouter = new JRadioButton("Ajouter");
 		rdbtnAjouter.setSelected(true);
 		rdbtnAjouter.setBackground(Color.PINK);
 		rdbtnAjouter.setForeground(Color.BLACK);
-		rdbtnAjouter.setBounds(10, 116, 109, 23);
+		rdbtnAjouter.setBounds(10, 116, 100, 23);
 		panel.add(rdbtnAjouter);
 		ajouterEnlever.add(rdbtnAjouter);
 		
 		JRadioButton rdbtnEnlever = new JRadioButton("Enlever");
 		rdbtnEnlever.setBackground(Color.PINK);
 		rdbtnEnlever.setForeground(Color.BLACK);
-		rdbtnEnlever.setBounds(121, 116, 80, 23);
+		rdbtnEnlever.setBounds(108, 116, 80, 23);
 		panel.add(rdbtnEnlever);
 		ajouterEnlever.add(rdbtnEnlever);
+		
+		textField = new JTextField();
+		textField.setBounds(256, 117, 86, 20);
+		panel.add(textField);
+		textField.setColumns(10);
 		
 		JButton btnBoisson = new JButton("Boisson 1");
 		btnBoisson.setEnabled(false);
@@ -104,8 +105,8 @@ public class Table_1 extends Liste_De_Boissons{
 				{
 					try
 					{
-						t1.ajouter(boisson1, Integer.parseInt(spinner.toString()));
-						t1.afficherTicket();
+						t1.ajouter(boisson1, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
 					{
@@ -116,8 +117,8 @@ public class Table_1 extends Liste_De_Boissons{
 				{
 					try
 					{
-						t1.enlever(boisson1, Integer.parseInt(spinner.toString()));
-						t1.afficherTicket();
+						t1.enlever(boisson1, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
 					{
@@ -139,8 +140,8 @@ public class Table_1 extends Liste_De_Boissons{
 				{
 					try
 					{
-						t1.ajouter(boisson2, Integer.parseInt(spinner.toString()));
-						t1.afficherTicket();
+						t1.ajouter(boisson2, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
 					{
@@ -151,8 +152,8 @@ public class Table_1 extends Liste_De_Boissons{
 				{
 					try
 					{
-						t1.enlever(boisson2, Integer.parseInt(spinner.toString()));
-						t1.afficherTicket();
+						t1.enlever(boisson2, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
 					{
@@ -207,7 +208,7 @@ public class Table_1 extends Liste_De_Boissons{
 		panel.add(btnImprimerTicket);
 		
 		JLabel lblQuantit = new JLabel("Quantit\u00E9 : ");
-		lblQuantit.setBounds(208, 120, 89, 14);
+		lblQuantit.setBounds(194, 120, 89, 14);
 		panel.add(lblQuantit);
 		
 		JButton btnNewButton = new JButton("Rafra\u00EEchir la Liste");

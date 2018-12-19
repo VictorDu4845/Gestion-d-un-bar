@@ -24,15 +24,15 @@ public class Interface_Graphique{
 		this.table1 = table1;
 	}
 	
-	TicketCaisse t1;
-	TicketCaisse t2;
-	TicketCaisse t3;
-	TicketCaisse t4;
-	TicketCaisse t5;
-	TicketCaisse t6;
-	TicketCaisse t7;
-	TicketCaisse t8;
-	TicketCaisse t9;
+	TicketCaisse t1 = new TicketCaisse("");
+	TicketCaisse t2 = new TicketCaisse("");
+	TicketCaisse t3 = new TicketCaisse("");
+	TicketCaisse t4 = new TicketCaisse("");
+	TicketCaisse t5 = new TicketCaisse("");
+	TicketCaisse t6 = new TicketCaisse("");
+	TicketCaisse t7 = new TicketCaisse("");
+	TicketCaisse t8 = new TicketCaisse("");
+	TicketCaisse t9 = new TicketCaisse("");
 	
 	public boolean table2 = false;
 	public boolean table3 = false;
@@ -334,7 +334,7 @@ public class Interface_Graphique{
 						if (table1 == false)
 						{
 							label_1.setText("");
-							TicketCaisse t1 = new TicketCaisse(nom);
+							t1 = new TicketCaisse(nom);
 							btnNewButton_1.setText(nom);
 							btnNewButton_1.setEnabled(true);
 							nom1 = nom;
@@ -353,7 +353,7 @@ public class Interface_Graphique{
 						if (table2 == false)
 						{
 							label_1.setText("");
-							TicketCaisse t2 = new TicketCaisse(nom);
+							t2 = new TicketCaisse(nom);
 							btnNewButton_2.setText(nom);
 							btnNewButton_2.setEnabled(true);
 							nom2 = nom;
@@ -372,7 +372,7 @@ public class Interface_Graphique{
 						if (table3 == false)
 						{
 							label_1.setText("");
-							TicketCaisse t3 = new TicketCaisse(nom);
+							t3 = new TicketCaisse(nom);
 							btnNewButton_3.setText(nom);
 							btnNewButton_3.setEnabled(true);
 							nom3 = nom;
@@ -391,7 +391,7 @@ public class Interface_Graphique{
 						if (table4 == false)
 						{
 							label_1.setText("");
-							TicketCaisse t4 = new TicketCaisse(nom);
+							t4 = new TicketCaisse(nom);
 							btnNewButton_4.setText(nom);
 							btnNewButton_4.setEnabled(true);
 							nom4 = nom;
@@ -410,7 +410,7 @@ public class Interface_Graphique{
 						if (table5 == false)
 						{
 							label_1.setText("");
-							TicketCaisse t5 = new TicketCaisse(nom);
+							t5 = new TicketCaisse(nom);
 							btnNewButton_5.setText(nom);
 							btnNewButton_5.setEnabled(true);
 							nom5 =nom;
@@ -430,7 +430,7 @@ public class Interface_Graphique{
 						if (table6 == false)
 						{
 							label_1.setText("");
-							TicketCaisse t6 = new TicketCaisse(nom);
+							t6 = new TicketCaisse(nom);
 							btnNewButton_6.setText(nom);
 							btnNewButton_6.setEnabled(true);
 							nom6 = nom;
@@ -450,7 +450,7 @@ public class Interface_Graphique{
 						if (table7 == false)
 						{
 							label_1.setText("");
-							TicketCaisse t7 = new TicketCaisse(nom);
+							t7 = new TicketCaisse(nom);
 							btnNewButton_7.setText(nom);
 							btnNewButton_7.setEnabled(true);
 							nom7 = nom;
@@ -470,7 +470,7 @@ public class Interface_Graphique{
 						if (table8 == false)
 						{
 							label_1.setText("");
-							TicketCaisse t8 = new TicketCaisse(nom);
+							t8 = new TicketCaisse(nom);
 							btnNewButton_8.setText(nom);
 							btnNewButton_8.setEnabled(true);
 							nom8 = nom;
@@ -490,7 +490,7 @@ public class Interface_Graphique{
 						if (table9 == false)
 						{
 							label_1.setText("");
-							TicketCaisse t9 = new TicketCaisse(nom);
+							t9 = new TicketCaisse(nom);
 							btnNewButton_9.setText(nom);
 							btnNewButton_9.setEnabled(true);
 							nom9 = nom;

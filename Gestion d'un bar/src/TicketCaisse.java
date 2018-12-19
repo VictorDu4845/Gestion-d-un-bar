@@ -131,7 +131,7 @@ public class TicketCaisse
 		this.afficherTicket();
 	}
 	
-	public void afficherTicket() throws ListeVideException
+	public String afficherTicket() throws ListeVideException
 	{
 		Node courant = this.head.next;
 		double montantTotal = 0;
@@ -152,6 +152,7 @@ public class TicketCaisse
 		}
 		ticket = ticket + "Vous avez " + taille + " consommation(s) différente(s)" + "\n" + "Pour un montant total de : " + (double)Math.round(montantTotal*100)/100 + " €" + "\n" + "\n" + "Impression terminée" + "\n" + "-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_" + "\n";
 		System.out.println(ticket);
+		return ticket;
 	}
 	
 	public int taille()
