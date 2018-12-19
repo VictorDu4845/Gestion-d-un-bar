@@ -277,7 +277,7 @@ public class Liste_De_Boissons extends Interface_Graphique{
 		JButton btnSupprimer_1 = new JButton("Supprimer");
 		btnSupprimer_1.setBounds(264, 152, 110, 23);
 		panel.add(btnSupprimer_1);
-		btnSupprimer.addActionListener(new ActionListener() 
+		btnSupprimer_1.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{	
@@ -292,7 +292,7 @@ public class Liste_De_Boissons extends Interface_Graphique{
 		JButton btnSupprimer_2 = new JButton("Supprimer");
 		btnSupprimer_2.setBounds(264, 177, 110, 23);
 		panel.add(btnSupprimer_2);
-		btnSupprimer.addActionListener(new ActionListener() 
+		btnSupprimer_2.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{	
@@ -307,7 +307,7 @@ public class Liste_De_Boissons extends Interface_Graphique{
 		JButton btnSupprimer_3 = new JButton("Supprimer");
 		btnSupprimer_3.setBounds(264, 202, 110, 23);
 		panel.add(btnSupprimer_3);
-		btnSupprimer.addActionListener(new ActionListener() 
+		btnSupprimer_3.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{	
@@ -322,7 +322,7 @@ public class Liste_De_Boissons extends Interface_Graphique{
 		JButton btnSupprimer_4 = new JButton("Supprimer");
 		btnSupprimer_4.setBounds(264, 227, 110, 23);
 		panel.add(btnSupprimer_4);
-		btnSupprimer.addActionListener(new ActionListener() 
+		btnSupprimer_4.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{	
@@ -337,7 +337,7 @@ public class Liste_De_Boissons extends Interface_Graphique{
 		JButton btnSupprimer_5 = new JButton("Supprimer");
 		btnSupprimer_5.setBounds(264, 252, 110, 23);
 		panel.add(btnSupprimer_5);
-		btnSupprimer.addActionListener(new ActionListener() 
+		btnSupprimer_5.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{	
@@ -352,7 +352,7 @@ public class Liste_De_Boissons extends Interface_Graphique{
 		JButton btnSupprimer_6 = new JButton("Supprimer");
 		btnSupprimer_6.setBounds(264, 277, 110, 23);
 		panel.add(btnSupprimer_6);
-		btnSupprimer.addActionListener(new ActionListener() 
+		btnSupprimer_6.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{	
@@ -367,7 +367,7 @@ public class Liste_De_Boissons extends Interface_Graphique{
 		JButton btnSupprimer_7 = new JButton("Supprimer");
 		btnSupprimer_7.setBounds(264, 302, 110, 23);
 		panel.add(btnSupprimer_7);
-		btnSupprimer.addActionListener(new ActionListener() 
+		btnSupprimer_7.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{	
@@ -382,7 +382,7 @@ public class Liste_De_Boissons extends Interface_Graphique{
 		JButton btnSupprimer_8 = new JButton("Supprimer");
 		btnSupprimer_8.setBounds(264, 327, 110, 23);
 		panel.add(btnSupprimer_8);
-		btnSupprimer.addActionListener(new ActionListener() 
+		btnSupprimer_8.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{	
@@ -397,7 +397,7 @@ public class Liste_De_Boissons extends Interface_Graphique{
 		JButton btnSupprimer_9 = new JButton("Supprimer");
 		btnSupprimer_9.setBounds(264, 352, 110, 23);
 		panel.add(btnSupprimer_9);
-		btnSupprimer.addActionListener(new ActionListener() 
+		btnSupprimer_9.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{	

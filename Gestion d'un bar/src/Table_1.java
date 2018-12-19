@@ -52,7 +52,7 @@ public class Table_1 extends Liste_De_Boissons{
 		ButtonGroup ajouterEnlever = new ButtonGroup( );
 		
 		frame = new JFrame();
-		frame.setBounds(100, 100, 650, 420);
+		frame.setBounds(100, 100, 650, 620);
 		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		
 		JPanel panel = new JPanel();
@@ -131,6 +131,36 @@ public class Table_1 extends Liste_De_Boissons{
 		btnBoisson_1.setEnabled(false);
 		btnBoisson_1.setBounds(10, 180, 100, 23);
 		panel.add(btnBoisson_1);
+		btnBoisson_1.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{	
+				if (rdbtnAjouter.isSelected() == true)
+				{
+					try
+					{
+						t1.ajouter(boisson2, Integer.parseInt(spinner.toString()));
+						t1.afficherTicket();
+					}
+					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
+					{
+						System.err.println(erreur.getMessage());
+					}
+				}
+				else if (rdbtnEnlever.isSelected() == true)
+				{
+					try
+					{
+						t1.enlever(boisson2, Integer.parseInt(spinner.toString()));
+						t1.afficherTicket();
+					}
+					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
+					{
+						System.err.println(erreur.getMessage());
+					}
+				}
+			}
+		});
 		
 		JButton btnBoisson_2 = new JButton("Boisson 3");
 		btnBoisson_2.setEnabled(false);
@@ -187,57 +217,105 @@ public class Table_1 extends Liste_De_Boissons{
 		{
 			public void actionPerformed(ActionEvent e)
 			{	
-				if (boisson1 != null)
+				if (boisson1.nom != null)
 				{
 					btnBoisson.setText(boisson1.getNom());
 					btnBoisson.setEnabled(true);
 				}
-				else if (boisson1 == null)
+				else if (boisson1.nom == null)
 				{
-					btnBoisson.setText("null");
+					btnBoisson.setText("Boisson 1");
 					btnBoisson.setEnabled(false);
 				}
-				if (boisson2 != null)
+				if (boisson2.nom != null)
 				{
 					btnBoisson_1.setText(boisson2.getNom());
 					btnBoisson_1.setEnabled(true);
 				}
-				else if (boisson2 == null)
+				else if (boisson2.nom == null)
 				{
-					btnBoisson_1.setText("null");
+					btnBoisson_1.setText("Boisson 2");
 					btnBoisson_1.setEnabled(false);
 				}
-				if (boisson3 != null)
+				if (boisson3.nom != null)
 				{
-					
+					btnBoisson_2.setText(boisson3.getNom());
+					btnBoisson_2.setEnabled(true);
 				}
-				if (boisson4 != null)
+				else if (boisson3.nom == null)
 				{
-					
+					btnBoisson_2.setText("Boisson 3");
+					btnBoisson_2.setEnabled(false);
 				}
-				if (boisson5 != null)
+				if (boisson4.nom != null)
 				{
-					
+					btnBoisson_3.setText(boisson3.getNom());
+					btnBoisson_3.setEnabled(true);
 				}
-				if (boisson6 != null)
+				else if (boisson4.nom == null)
 				{
-					
+					btnBoisson_3.setText("Boisson 4");
+					btnBoisson_3.setEnabled(false);
 				}
-				if (boisson7 != null)
+				if (boisson5.nom != null)
 				{
-					
+					btnBoisson_4.setText(boisson5.getNom());
+					btnBoisson_4.setEnabled(true);
 				}
-				if (boisson8 != null)
+				else if (boisson5.nom == null)
 				{
-					
+					btnBoisson_4.setText("Boisson 5");
+					btnBoisson_4.setEnabled(false);
 				}
-				if (boisson9 != null)
+				if (boisson6.nom != null)
 				{
-					
+					btnBoisson_5.setText(boisson6.getNom());
+					btnBoisson_5.setEnabled(true);
 				}
-				if (boisson10 != null)
+				else if (boisson6.nom == null)
 				{
-					
+					btnBoisson_5.setText("Boisson 6");
+					btnBoisson_5.setEnabled(false);
+				}
+				if (boisson7.nom != null)
+				{
+					btnBoisson_6.setText(boisson7.getNom());
+					btnBoisson_6.setEnabled(true);
+				}
+				else if (boisson7.nom == null)
+				{
+					btnBoisson_6.setText("Boisson 7");
+					btnBoisson_6.setEnabled(false);
+				}
+				if (boisson8.nom != null)
+				{
+					btnBoisson_7.setText(boisson8.getNom());
+					btnBoisson_7.setEnabled(true);
+				}
+				else if (boisson8.nom == null)
+				{
+					btnBoisson_7.setText("Boisson 8");
+					btnBoisson_7.setEnabled(false);
+				}
+				if (boisson9.nom != null)
+				{
+					btnBoisson_8.setText(boisson9.getNom());
+					btnBoisson_8.setEnabled(true);
+				}
+				else if (boisson9.nom == null)
+				{
+					btnBoisson_8.setText("Boisson 9");
+					btnBoisson_8.setEnabled(false);
+				}
+				if (boisson10.nom != null)
+				{
+					btnBoisson_9.setText(boisson10.getNom());
+					btnBoisson_9.setEnabled(true);
+				}
+				else if (boisson10.nom == null)
+				{
+					btnBoisson_9.setText("Boisson 10");
+					btnBoisson_9.setEnabled(false);
 				}
 			}
 		});
