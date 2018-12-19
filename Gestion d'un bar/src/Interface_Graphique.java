@@ -24,6 +24,16 @@ public class Interface_Graphique{
 		this.table1 = table1;
 	}
 	
+	TicketCaisse t1;
+	TicketCaisse t2;
+	TicketCaisse t3;
+	TicketCaisse t4;
+	TicketCaisse t5;
+	TicketCaisse t6;
+	TicketCaisse t7;
+	TicketCaisse t8;
+	TicketCaisse t9;
+	
 	public boolean table2 = false;
 	public boolean table3 = false;
 	public boolean table4 = false;
@@ -38,51 +48,42 @@ public class Interface_Graphique{
 	{
 		return nom1;
 	}
-	
 	public String nom2 ="";
 	public String getNom2()
 	{
 		return nom2;
 	}
-	
 	public String nom3 ="";
 	public String getNom3()
 	{
 		return nom3;
 	}
-	
 	public String nom4 ="";
 	public String getNom4()
 	{
 		return nom4;
 	}
-	
 	public String nom5 ="";
 	public String getNom5()
 	{
 		return nom5;
 	}
-	
 	public String nom6 ="";
 	public String getNom6()
 	{
 		return nom6;
 	}
-	
 	public String nom7 ="";
 	public String getNom7()
 	{
 		return nom7;
 	}
-	
 	public String nom8 ="";
 	public String getNom8()
 	{
 		return nom8;
 	}
-	
 	public String nom9 ="";
-	
 	public String getNom9()
 	{
 		return nom9;
@@ -137,66 +138,57 @@ public class Interface_Graphique{
 		lblChoisissezSaTable.setBounds(10, 61, 120, 14);
 		panel.add(lblChoisissezSaTable);
 		
-		ButtonGroup bg1 = new ButtonGroup( );
+		ButtonGroup bg1 = new ButtonGroup();
 		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton("Table 1");
-		rdbtnNewRadioButton.setForeground(Color.BLACK);
 		rdbtnNewRadioButton.setBackground(Color.PINK);
 		rdbtnNewRadioButton.setBounds(10, 83, 109, 23);
 		panel.add(rdbtnNewRadioButton);
 		bg1.add(rdbtnNewRadioButton);
 		
 		JRadioButton rdbtnNewRadioButton_1 = new JRadioButton("Table 2");
-		rdbtnNewRadioButton_1.setForeground(Color.BLACK);
 		rdbtnNewRadioButton_1.setBackground(Color.PINK);
 		rdbtnNewRadioButton_1.setBounds(10, 109, 109, 23);
 		panel.add(rdbtnNewRadioButton_1);
 		bg1.add(rdbtnNewRadioButton_1);
 		
 		JRadioButton rdbtnNewRadioButton_2 = new JRadioButton("Table 3");
-		rdbtnNewRadioButton_2.setForeground(Color.BLACK);
 		rdbtnNewRadioButton_2.setBackground(Color.PINK);
 		rdbtnNewRadioButton_2.setBounds(10, 135, 109, 23);
 		panel.add(rdbtnNewRadioButton_2);
 		bg1.add(rdbtnNewRadioButton_2);
 		
 		JRadioButton rdbtnNewRadioButton_3 = new JRadioButton("Table 4");
-		rdbtnNewRadioButton_3.setForeground(Color.BLACK);
 		rdbtnNewRadioButton_3.setBackground(Color.PINK);
 		rdbtnNewRadioButton_3.setBounds(121, 83, 109, 23);
 		panel.add(rdbtnNewRadioButton_3);
 		bg1.add(rdbtnNewRadioButton_3);
 		
 		JRadioButton rdbtnNewRadioButton_4 = new JRadioButton("Table 5");
-		rdbtnNewRadioButton_4.setForeground(Color.BLACK);
 		rdbtnNewRadioButton_4.setBackground(Color.PINK);
 		rdbtnNewRadioButton_4.setBounds(121, 109, 109, 23);
 		panel.add(rdbtnNewRadioButton_4);
 		bg1.add(rdbtnNewRadioButton_4);
 		
 		JRadioButton rdbtnNewRadioButton_5 = new JRadioButton("Table 6");
-		rdbtnNewRadioButton_5.setForeground(Color.BLACK);
 		rdbtnNewRadioButton_5.setBackground(Color.PINK);
 		rdbtnNewRadioButton_5.setBounds(121, 135, 109, 23);
 		panel.add(rdbtnNewRadioButton_5);
 		bg1.add(rdbtnNewRadioButton_5);
 		
 		JRadioButton rdbtnNewRadioButton_6 = new JRadioButton("Table 7");
-		rdbtnNewRadioButton_6.setForeground(Color.BLACK);
 		rdbtnNewRadioButton_6.setBackground(Color.PINK);
 		rdbtnNewRadioButton_6.setBounds(232, 83, 109, 23);
 		panel.add(rdbtnNewRadioButton_6);
 		bg1.add(rdbtnNewRadioButton_6);
 		
 		JRadioButton rdbtnNewRadioButton_7 = new JRadioButton("Table 8");
-		rdbtnNewRadioButton_7.setForeground(Color.BLACK);
 		rdbtnNewRadioButton_7.setBackground(Color.PINK);
 		rdbtnNewRadioButton_7.setBounds(232, 109, 109, 23);
 		panel.add(rdbtnNewRadioButton_7);
 		bg1.add(rdbtnNewRadioButton_7);
 		
 		JRadioButton rdbtnNewRadioButton_8 = new JRadioButton("Table 9");
-		rdbtnNewRadioButton_8.setForeground(Color.BLACK);
 		rdbtnNewRadioButton_8.setBackground(Color.PINK);
 		rdbtnNewRadioButton_8.setBounds(232, 135, 109, 23);
 		panel.add(rdbtnNewRadioButton_8);
@@ -319,7 +311,6 @@ public class Interface_Graphique{
 		});
 		
 		JButton btnNewButton = new JButton("Ajouter le Client");
-		btnNewButton.setForeground(Color.BLACK);
 		btnNewButton.setBackground(UIManager.getColor("Button.background"));
 		btnNewButton.addActionListener(new ActionListener() 
 		{
@@ -714,12 +705,23 @@ public class Interface_Graphique{
 		
 		JButton btnOuvrirLeMenu = new JButton("Ouvrir le menu Boissons");
 		btnOuvrirLeMenu.setBounds(347, 164, 177, 23);
-		panel.add(btnOuvrirLeMenu);
-		btnOuvrirLeMenu.addActionListener(new ActionListener() 
+		panel.add(btnOuvrirLeMenu);btnOuvrirLeMenu.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
 				Liste_De_Boissons liste = new Liste_De_Boissons();
+				
+		}
+		});
+		
+		JButton btnQuitterLapplication = new JButton("Quitter l'application");
+		btnQuitterLapplication.setBounds(371, 345, 152, 23);
+		panel.add(btnQuitterLapplication);
+		btnQuitterLapplication.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				System.exit(0);
 				
 		}
 		});
@@ -728,6 +730,3 @@ public class Interface_Graphique{
 
 	}
 }
-
-
-

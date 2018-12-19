@@ -170,9 +170,9 @@ public class Liste_De_Boissons extends Interface_Graphique{
 		label_13.setBounds(10, 356, 46, 14);
 		panel.add(label_13);
 		
-		JLabel lblBoisson = new JLabel("");
-		lblBoisson.setBounds(66, 131, 135, 14);
-		panel.add(lblBoisson);
+		JLabel lblBoisson_a = new JLabel("");
+		lblBoisson_a.setBounds(66, 131, 135, 14);
+		panel.add(lblBoisson_a);
 		
 		JLabel lblBoisson_1 = new JLabel("");
 		lblBoisson_1.setBounds(66, 156, 135, 14);
@@ -210,9 +210,9 @@ public class Liste_De_Boissons extends Interface_Graphique{
 		lblBoisson_9.setBounds(66, 356, 135, 14);
 		panel.add(lblBoisson_9);
 		
-		JLabel lblPrix = new JLabel("");
-		lblPrix.setBounds(211, 131, 46, 14);
-		panel.add(lblPrix);
+		JLabel lblPrix_a = new JLabel("");
+		lblPrix_a.setBounds(211, 131, 46, 14);
+		panel.add(lblPrix_a);
 		
 		JLabel lblPrix_1 = new JLabel("");
 		lblPrix_1.setBounds(211, 156, 46, 14);
@@ -269,8 +269,8 @@ public class Liste_De_Boissons extends Interface_Graphique{
 				boisson1 = null;
 				emplacement1 = false;
 				label_error.setText("");
-				lblBoisson.setText("");
-				lblPrix.setText("");
+				lblBoisson_a.setText("");
+				lblPrix_a.setText("");
 			}
 		});
 		
@@ -430,8 +430,8 @@ public class Liste_De_Boissons extends Interface_Graphique{
 						{
 							label_error.setText("");
 							boisson1 = new BoissonEtendue (nom, prixTVAC, tva, 1);
-							lblBoisson.setText(nom);
-							lblPrix.setText(prixString + " €");
+							lblBoisson_a.setText(nom);
+							lblPrix_a.setText(prixString + " €");
 							emplacement1 = true;
 						}
 						else
@@ -445,7 +445,7 @@ public class Liste_De_Boissons extends Interface_Graphique{
 						if (emplacement2 == false)
 						{
 							label_error.setText("");
-							BoissonEtendue boisson2 = new BoissonEtendue (nom, prixTVAC, tva, 1);
+							boisson2 = new BoissonEtendue (nom, prixTVAC, tva, 1);
 							lblBoisson_1.setText(nom);
 							lblPrix_1.setText(prixString + " €");
 							emplacement2 = true;
@@ -460,7 +460,7 @@ public class Liste_De_Boissons extends Interface_Graphique{
 						if (emplacement3 == false)
 						{
 							label_error.setText("");
-							BoissonEtendue boisson1 = new BoissonEtendue (nom, prixTVAC, tva, 1);
+							boisson3 = new BoissonEtendue (nom, prixTVAC, tva, 1);
 							lblBoisson_2.setText(nom);
 							lblPrix_2.setText(prixString + " €");
 							emplacement3 = true;
@@ -476,7 +476,7 @@ public class Liste_De_Boissons extends Interface_Graphique{
 						if (emplacement4 == false)
 						{
 							label_error.setText("");
-							BoissonEtendue boisson1 = new BoissonEtendue (nom, prixTVAC, tva, 1);
+							boisson4 = new BoissonEtendue (nom, prixTVAC, tva, 1);
 							lblBoisson_3.setText(nom);
 							lblPrix_3.setText(prixString + " €");
 							emplacement4 = true;
@@ -492,7 +492,7 @@ public class Liste_De_Boissons extends Interface_Graphique{
 						if (emplacement5 == false)
 						{
 							label_error.setText("");
-							BoissonEtendue boisson1 = new BoissonEtendue (nom, prixTVAC, tva, 1);
+							boisson5 = new BoissonEtendue (nom, prixTVAC, tva, 1);
 							lblBoisson_4.setText(nom);
 							lblPrix_4.setText(prixString + " €");
 							emplacement5 = true;
@@ -508,7 +508,7 @@ public class Liste_De_Boissons extends Interface_Graphique{
 						if (emplacement6 == false)
 						{
 							label_error.setText("");
-							BoissonEtendue boisson1 = new BoissonEtendue (nom, prixTVAC, tva, 1);
+							boisson6 = new BoissonEtendue (nom, prixTVAC, tva, 1);
 							lblBoisson_5.setText(nom);
 							lblPrix_5.setText(prixString + " €");
 							emplacement6 = true;
@@ -524,7 +524,7 @@ public class Liste_De_Boissons extends Interface_Graphique{
 						if (emplacement7 == false)
 						{
 							label_error.setText("");
-							BoissonEtendue boisson1 = new BoissonEtendue (nom, prixTVAC, tva, 1);
+							boisson7 = new BoissonEtendue (nom, prixTVAC, tva, 1);
 							lblBoisson_6.setText(nom);
 							lblPrix_6.setText(prixString + " €");
 							emplacement7 = true;
@@ -540,7 +540,7 @@ public class Liste_De_Boissons extends Interface_Graphique{
 						if (emplacement8 == false)
 						{
 							label_error.setText("");
-							BoissonEtendue boisson1 = new BoissonEtendue (nom, prixTVAC, tva, 1);
+							boisson8 = new BoissonEtendue (nom, prixTVAC, tva, 1);
 							lblBoisson_7.setText(nom);
 							lblPrix_7.setText(prixString + " €");
 							emplacement8 = true;
@@ -556,7 +556,7 @@ public class Liste_De_Boissons extends Interface_Graphique{
 						if (emplacement9 == false)
 						{
 							label_error.setText("");
-							BoissonEtendue boisson1 = new BoissonEtendue (nom, prixTVAC, tva, 1);
+							boisson9 = new BoissonEtendue (nom, prixTVAC, tva, 1);
 							lblBoisson_8.setText(nom);
 							lblPrix_8.setText(prixString + " €");
 							emplacement9 = true;
@@ -571,7 +571,7 @@ public class Liste_De_Boissons extends Interface_Graphique{
 						if (emplacement10 == false)
 						{
 							label_error.setText("");
-							BoissonEtendue boisson1 = new BoissonEtendue (nom, prixTVAC, tva, 1);
+							boisson10 = new BoissonEtendue (nom, prixTVAC, tva, 1);
 							lblBoisson_9.setText(nom);
 							lblPrix_9.setText(prixString + " €");
 							emplacement10 = true;
