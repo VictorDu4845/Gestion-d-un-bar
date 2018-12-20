@@ -18,6 +18,6 @@ public class NomDuClient
 	}
 	public String toString()
 	{
-		return "Nom du client : " + nom;
+		return nom;
 	}
 }

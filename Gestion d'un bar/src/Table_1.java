@@ -75,7 +75,7 @@ public class Table_1 extends Liste_De_Boissons{
 		lblNewLabel.setBounds(10, 11, 100, 14);
 		panel.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Client : " + getNom1());
+		JLabel lblNewLabel_1 = new JLabel("Client : " + nom1);
 		lblNewLabel_1.setBounds(10, 36, 120, 14);
 		panel.add(lblNewLabel_1);
 		
@@ -118,7 +118,7 @@ public class Table_1 extends Liste_De_Boissons{
 					try
 					{
 						t1.ajouter(boisson1, Integer.parseInt(textField.getText()));
-						textPane.setText(t1.afficherTicket());
+						textPane.setText("Client :  "+ getNom1() + "\n" + t1.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
 					{
