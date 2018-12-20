@@ -24,15 +24,15 @@ public class Interface_Graphique{
 		this.table1 = table1;
 	}
 	
-	TicketCaisse t1 = new TicketCaisse("");
-	TicketCaisse t2 = new TicketCaisse("");
-	TicketCaisse t3 = new TicketCaisse("");
-	TicketCaisse t4 = new TicketCaisse("");
-	TicketCaisse t5 = new TicketCaisse("");
-	TicketCaisse t6 = new TicketCaisse("");
-	TicketCaisse t7 = new TicketCaisse("");
-	TicketCaisse t8 = new TicketCaisse("");
-	TicketCaisse t9 = new TicketCaisse("");
+	static TicketCaisse t1 = new TicketCaisse("");
+	static TicketCaisse t2 = new TicketCaisse("");
+	static TicketCaisse t3 = new TicketCaisse("");
+	static TicketCaisse t4 = new TicketCaisse("");
+	static TicketCaisse t5 = new TicketCaisse("");
+	static TicketCaisse t6 = new TicketCaisse("");
+	static TicketCaisse t7 = new TicketCaisse("");
+	static TicketCaisse t8 = new TicketCaisse("");
+	static TicketCaisse t9 = new TicketCaisse("");
 	
 	public boolean table2 = false;
 	public boolean table3 = false;
@@ -44,47 +44,47 @@ public class Interface_Graphique{
 	public boolean table9 = false;
 	
 	public static String nom1 ="";
-	public String getNom1()
+	public static String getNom1()
 	{
 		return nom1;
 	}
-	public String nom2 ="";
-	public String getNom2()
+	public static String nom2 ="";
+	public static String getNom2()
 	{
 		return nom2;
 	}
-	public String nom3 ="";
-	public String getNom3()
+	public static String nom3 ="";
+	public static String getNom3()
 	{
 		return nom3;
 	}
-	public String nom4 ="";
-	public String getNom4()
+	public static String nom4 ="";
+	public static String getNom4()
 	{
 		return nom4;
 	}
-	public String nom5 ="";
-	public String getNom5()
+	public static String nom5 ="";
+	public static String getNom5()
 	{
 		return nom5;
 	}
-	public String nom6 ="";
-	public String getNom6()
+	public static String nom6 ="";
+	public static String getNom6()
 	{
 		return nom6;
 	}
-	public String nom7 ="";
-	public String getNom7()
+	public static String nom7 ="";
+	public static String getNom7()
 	{
 		return nom7;
 	}
-	public String nom8 ="";
-	public String getNom8()
+	public static String nom8 ="";
+	public static String getNom8()
 	{
 		return nom8;
 	}
-	public String nom9 ="";
-	public String getNom9()
+	public static String nom9 ="";
+	public static String getNom9()
 	{
 		return nom9;
 	}

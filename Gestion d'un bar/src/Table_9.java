@@ -19,7 +19,7 @@ import javax.swing.JTextField;
 import java.awt.Font;
 import javax.swing.JScrollPane;
 
-public class Table_1{
+public class Table_9{
 
 	public JFrame frame;
 	private JTextField textField;
@@ -31,7 +31,7 @@ public class Table_1{
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Table_1 window = new Table_1();
+					Table_9 window = new Table_9();
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -43,7 +43,7 @@ public class Table_1{
 	/**
 	 * Create the application.
 	 */
-	public Table_1() {
+	public Table_9() {
 		initialize();
 		this.frame.setVisible(true);
 	}
@@ -66,13 +66,13 @@ public class Table_1{
 		JTextPane textPane = new JTextPane();
 		try 
 		{
-			textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+			textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 		}
 		catch (ListeVideException e)
 		{
-			textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
+			textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
 		}
-		textPane.setBounds(-261, 11, 604, 384);
+		textPane.setBounds(20, 269, 604, 301);
 		panel.add(textPane);
 		
 		JScrollPane sp = new JScrollPane(textPane, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
@@ -125,8 +125,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.ajouter(Liste_De_Boissons.boisson1, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.ajouter(Liste_De_Boissons.boisson1, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
 					{
@@ -137,8 +137,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.enlever(Liste_De_Boissons.boisson1, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.enlever(Liste_De_Boissons.boisson1, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException erreur)
 					{
@@ -146,7 +146,7 @@ public class Table_1{
 					}
 					catch (ListeVideException erreur)
 					{
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
 					}
 				}
 			}
@@ -164,8 +164,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.ajouter(Liste_De_Boissons.boisson2, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.ajouter(Liste_De_Boissons.boisson2, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
 					{
@@ -176,8 +176,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.enlever(Liste_De_Boissons.boisson2, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.enlever(Liste_De_Boissons.boisson2, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException erreur)
 					{
@@ -185,7 +185,7 @@ public class Table_1{
 					}
 					catch (ListeVideException erreur)
 					{
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
 					}
 				}
 			}
@@ -203,8 +203,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.ajouter(Liste_De_Boissons.boisson3, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.ajouter(Liste_De_Boissons.boisson3, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
 					{
@@ -215,8 +215,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.enlever(Liste_De_Boissons.boisson3, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.enlever(Liste_De_Boissons.boisson3, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException erreur)
 					{
@@ -224,7 +224,7 @@ public class Table_1{
 					}
 					catch (ListeVideException erreur)
 					{
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
 					}
 				}
 			}
@@ -242,8 +242,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.ajouter(Liste_De_Boissons.boisson4, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.ajouter(Liste_De_Boissons.boisson4, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
 					{
@@ -254,8 +254,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.enlever(Liste_De_Boissons.boisson4, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.enlever(Liste_De_Boissons.boisson4, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException erreur)
 					{
@@ -263,7 +263,7 @@ public class Table_1{
 					}
 					catch (ListeVideException erreur)
 					{
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
 					}
 				}
 			}
@@ -280,8 +280,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.ajouter(Liste_De_Boissons.boisson5, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.ajouter(Liste_De_Boissons.boisson5, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
 					{
@@ -292,8 +292,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.enlever(Liste_De_Boissons.boisson5, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.enlever(Liste_De_Boissons.boisson5, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException erreur)
 					{
@@ -301,7 +301,7 @@ public class Table_1{
 					}
 					catch (ListeVideException erreur)
 					{
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
 					}
 				}
 			}
@@ -319,8 +319,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.ajouter(Liste_De_Boissons.boisson6, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.ajouter(Liste_De_Boissons.boisson6, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
 					{
@@ -331,8 +331,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.enlever(Liste_De_Boissons.boisson6, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.enlever(Liste_De_Boissons.boisson6, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException erreur)
 					{
@@ -340,7 +340,7 @@ public class Table_1{
 					}
 					catch (ListeVideException erreur)
 					{
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
 					}
 				}
 			}
@@ -358,8 +358,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.ajouter(Liste_De_Boissons.boisson7, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.ajouter(Liste_De_Boissons.boisson7, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
 					{
@@ -370,8 +370,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.enlever(Liste_De_Boissons.boisson7, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.enlever(Liste_De_Boissons.boisson7, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException erreur)
 					{
@@ -379,7 +379,7 @@ public class Table_1{
 					}
 					catch (ListeVideException erreur)
 					{
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
 					}
 				}
 			}
@@ -397,8 +397,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.ajouter(Liste_De_Boissons.boisson8, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.ajouter(Liste_De_Boissons.boisson8, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
 					{
@@ -409,8 +409,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.enlever(Liste_De_Boissons.boisson8, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.enlever(Liste_De_Boissons.boisson8, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException erreur)
 					{
@@ -418,7 +418,7 @@ public class Table_1{
 					}
 					catch (ListeVideException erreur)
 					{
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
 					}
 				}
 			}
@@ -436,8 +436,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.ajouter(Liste_De_Boissons.boisson9, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.ajouter(Liste_De_Boissons.boisson9, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
 					{
@@ -448,8 +448,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.enlever(Liste_De_Boissons.boisson9, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.enlever(Liste_De_Boissons.boisson9, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException erreur)
 					{
@@ -457,7 +457,7 @@ public class Table_1{
 					}
 					catch (ListeVideException erreur)
 					{
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
 					}
 				}
 			}
@@ -475,8 +475,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.ajouter(Liste_De_Boissons.boisson10, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.ajouter(Liste_De_Boissons.boisson10, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
 					{
@@ -487,8 +487,8 @@ public class Table_1{
 				{
 					try
 					{
-						Interface_Graphique.t1.enlever(Liste_De_Boissons.boisson10, Integer.parseInt(textField.getText()));
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + Interface_Graphique.t1.afficherTicket());
+						Interface_Graphique.t9.enlever(Liste_De_Boissons.boisson10, Integer.parseInt(textField.getText()));
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + Interface_Graphique.t9.afficherTicket());
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException erreur)
 					{
@@ -496,7 +496,7 @@ public class Table_1{
 					}
 					catch (ListeVideException erreur)
 					{
-						textPane.setText("Client :  "+ Interface_Graphique.getNom1() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
+						textPane.setText("Client :  "+ Interface_Graphique.getNom9() + "\n" + "\n" + "Il n'y a pas encore de consommations pour ce Client.");
 					}
 				}
 			}

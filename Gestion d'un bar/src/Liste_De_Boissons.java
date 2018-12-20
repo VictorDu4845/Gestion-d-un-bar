@@ -21,20 +21,20 @@ public class Liste_De_Boissons extends Interface_Graphique{
 	private JTextField textField_2;
 	private JTextField textField_3;
 	
-	String nom;
-	double prixTVAC;
-	double tva;
+	static String nom;
+	static double prixTVAC;
+	static double tva;
 	
-	BoissonEtendue boisson1 = new BoissonEtendue (nom, prixTVAC, tva, 1);
-	BoissonEtendue boisson2 = new BoissonEtendue (nom, prixTVAC, tva, 1);
-	BoissonEtendue boisson3 = new BoissonEtendue (nom, prixTVAC, tva, 1);
-	BoissonEtendue boisson4 = new BoissonEtendue (nom, prixTVAC, tva, 1);
-	BoissonEtendue boisson5 = new BoissonEtendue (nom, prixTVAC, tva, 1);
-	BoissonEtendue boisson6 = new BoissonEtendue (nom, prixTVAC, tva, 1);
-	BoissonEtendue boisson7 = new BoissonEtendue (nom, prixTVAC, tva, 1);
-	BoissonEtendue boisson8 = new BoissonEtendue (nom, prixTVAC, tva, 1);
-	BoissonEtendue boisson9 = new BoissonEtendue (nom, prixTVAC, tva, 1);
-	BoissonEtendue boisson10 = new BoissonEtendue (nom, prixTVAC, tva, 1);
+	static BoissonEtendue boisson1 = new BoissonEtendue (nom, prixTVAC, tva, 1);
+	static BoissonEtendue boisson2 = new BoissonEtendue (nom, prixTVAC, tva, 1);
+	static BoissonEtendue boisson3 = new BoissonEtendue (nom, prixTVAC, tva, 1);
+	static BoissonEtendue boisson4 = new BoissonEtendue (nom, prixTVAC, tva, 1);
+	static BoissonEtendue boisson5 = new BoissonEtendue (nom, prixTVAC, tva, 1);
+	static BoissonEtendue boisson6 = new BoissonEtendue (nom, prixTVAC, tva, 1);
+	static BoissonEtendue boisson7 = new BoissonEtendue (nom, prixTVAC, tva, 1);
+	static BoissonEtendue boisson8 = new BoissonEtendue (nom, prixTVAC, tva, 1);
+	static BoissonEtendue boisson9 = new BoissonEtendue (nom, prixTVAC, tva, 1);
+	static BoissonEtendue boisson10 = new BoissonEtendue (nom, prixTVAC, tva, 1);
 	
 	boolean emplacement1 = false;
 	boolean emplacement2 = false;
