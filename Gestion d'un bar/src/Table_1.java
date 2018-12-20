@@ -16,6 +16,8 @@ import com.victor.exceptions.ListeVideException;
 import com.victor.exceptions.QuantiteNegativeException;
 import javax.swing.JTextPane;
 import javax.swing.JTextField;
+import java.awt.Font;
+import javax.swing.JScrollPane;
 
 public class Table_1 extends Liste_De_Boissons{
 
@@ -62,8 +64,12 @@ public class Table_1 extends Liste_De_Boissons{
 		panel.setLayout(null);
 		
 		JTextPane textPane = new JTextPane();
-		textPane.setBounds(10, 244, 614, 326);
+		textPane.setBounds(20, 269, 604, 301);
 		panel.add(textPane);
+		
+		JScrollPane sp = new JScrollPane(textPane, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		sp.setBounds(20, 269, 604, 301);
+		panel.add(sp);
 		
 		JLabel lblNewLabel = new JLabel("Table 1 :");
 		lblNewLabel.setBounds(10, 11, 100, 14);
@@ -93,6 +99,12 @@ public class Table_1 extends Liste_De_Boissons{
 		panel.add(textField);
 		textField.setColumns(10);
 		
+		JLabel lblMessageDerreur = new JLabel("");
+		lblMessageDerreur.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblMessageDerreur.setForeground(Color.RED);
+		lblMessageDerreur.setBounds(10, 244, 614, 14);
+		panel.add(lblMessageDerreur);
+		
 		JButton btnBoisson = new JButton("Boisson 1");
 		btnBoisson.setEnabled(false);
 		btnBoisson.setBounds(10, 146, 100, 23);
@@ -110,7 +122,7 @@ public class Table_1 extends Liste_De_Boissons{
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
 					{
-						System.err.println(erreur.getMessage());
+						lblMessageDerreur.setText(erreur.getMessage());
 					}
 				}
 				else if (rdbtnEnlever.isSelected() == true)
@@ -122,7 +134,7 @@ public class Table_1 extends Liste_De_Boissons{
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
 					{
-						System.err.println(erreur.getMessage());
+						lblMessageDerreur.setText(erreur.getMessage());
 					}
 				}
 			}
@@ -145,7 +157,7 @@ public class Table_1 extends Liste_De_Boissons{
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
 					{
-						System.err.println(erreur.getMessage());
+						lblMessageDerreur.setText(erreur.getMessage());
 					}
 				}
 				else if (rdbtnEnlever.isSelected() == true)
@@ -157,7 +169,7 @@ public class Table_1 extends Liste_De_Boissons{
 					}
 					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
 					{
-						System.err.println(erreur.getMessage());
+						lblMessageDerreur.setText(erreur.getMessage());
 					}
 				}
 			}
@@ -167,45 +179,291 @@ public class Table_1 extends Liste_De_Boissons{
 		btnBoisson_2.setEnabled(false);
 		btnBoisson_2.setBounds(10, 210, 100, 23);
 		panel.add(btnBoisson_2);
+		btnBoisson_2.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{	
+				if (rdbtnAjouter.isSelected() == true)
+				{
+					try
+					{
+						t1.ajouter(boisson3, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
+					}
+					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
+					{
+						lblMessageDerreur.setText(erreur.getMessage());
+					}
+				}
+				else if (rdbtnEnlever.isSelected() == true)
+				{
+					try
+					{
+						t1.enlever(boisson3, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
+					}
+					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
+					{
+						lblMessageDerreur.setText(erreur.getMessage());
+					}
+				}
+			}
+		});
 		
 		JButton btnBoisson_3 = new JButton("Boisson 4");
 		btnBoisson_3.setEnabled(false);
 		btnBoisson_3.setBounds(121, 146, 100, 23);
 		panel.add(btnBoisson_3);
-		
+		btnBoisson_3.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{	
+				if (rdbtnAjouter.isSelected() == true)
+				{
+					try
+					{
+						t1.ajouter(boisson4, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
+					}
+					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
+					{
+						lblMessageDerreur.setText(erreur.getMessage());
+					}
+				}
+				else if (rdbtnEnlever.isSelected() == true)
+				{
+					try
+					{
+						t1.enlever(boisson4, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
+					}
+					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
+					{
+						lblMessageDerreur.setText(erreur.getMessage());
+					}
+				}
+			}
+		});
 		JButton btnBoisson_4 = new JButton("Boisson 5");
 		btnBoisson_4.setEnabled(false);
 		btnBoisson_4.setBounds(121, 176, 100, 23);
 		panel.add(btnBoisson_4);
+		btnBoisson_4.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{	
+				if (rdbtnAjouter.isSelected() == true)
+				{
+					try
+					{
+						t1.ajouter(boisson5, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
+					}
+					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
+					{
+						lblMessageDerreur.setText(erreur.getMessage());
+					}
+				}
+				else if (rdbtnEnlever.isSelected() == true)
+				{
+					try
+					{
+						t1.enlever(boisson5, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
+					}
+					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
+					{
+						lblMessageDerreur.setText(erreur.getMessage());
+					}
+				}
+			}
+		});
 		
 		JButton btnBoisson_5 = new JButton("Boisson 6");
 		btnBoisson_5.setEnabled(false);
 		btnBoisson_5.setBounds(121, 210, 100, 23);
 		panel.add(btnBoisson_5);
+		btnBoisson_5.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{	
+				if (rdbtnAjouter.isSelected() == true)
+				{
+					try
+					{
+						t1.ajouter(boisson6, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
+					}
+					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
+					{
+						lblMessageDerreur.setText(erreur.getMessage());
+					}
+				}
+				else if (rdbtnEnlever.isSelected() == true)
+				{
+					try
+					{
+						t1.enlever(boisson6, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
+					}
+					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
+					{
+						lblMessageDerreur.setText(erreur.getMessage());
+					}
+				}
+			}
+		});
 		
 		JButton btnBoisson_6 = new JButton("Boisson 7");
 		btnBoisson_6.setEnabled(false);
 		btnBoisson_6.setBounds(242, 146, 100, 23);
 		panel.add(btnBoisson_6);
+		btnBoisson_6.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{	
+				if (rdbtnAjouter.isSelected() == true)
+				{
+					try
+					{
+						t1.ajouter(boisson7, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
+					}
+					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
+					{
+						lblMessageDerreur.setText(erreur.getMessage());
+					}
+				}
+				else if (rdbtnEnlever.isSelected() == true)
+				{
+					try
+					{
+						t1.enlever(boisson7, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
+					}
+					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
+					{
+						lblMessageDerreur.setText(erreur.getMessage());
+					}
+				}
+			}
+		});
 		
 		JButton btnBoisson_7 = new JButton("Boisson 8");
 		btnBoisson_7.setEnabled(false);
 		btnBoisson_7.setBounds(242, 176, 100, 23);
 		panel.add(btnBoisson_7);
+		btnBoisson_7.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{	
+				if (rdbtnAjouter.isSelected() == true)
+				{
+					try
+					{
+						t1.ajouter(boisson8, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
+					}
+					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
+					{
+						lblMessageDerreur.setText(erreur.getMessage());
+					}
+				}
+				else if (rdbtnEnlever.isSelected() == true)
+				{
+					try
+					{
+						t1.enlever(boisson8, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
+					}
+					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
+					{
+						lblMessageDerreur.setText(erreur.getMessage());
+					}
+				}
+			}
+		});
 		
 		JButton btnBoisson_8 = new JButton("Boisson 9");
 		btnBoisson_8.setEnabled(false);
 		btnBoisson_8.setBounds(242, 210, 100, 23);
 		panel.add(btnBoisson_8);
+		btnBoisson_8.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{	
+				if (rdbtnAjouter.isSelected() == true)
+				{
+					try
+					{
+						t1.ajouter(boisson9, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
+					}
+					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
+					{
+						lblMessageDerreur.setText(erreur.getMessage());
+					}
+				}
+				else if (rdbtnEnlever.isSelected() == true)
+				{
+					try
+					{
+						t1.enlever(boisson9, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
+					}
+					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
+					{
+						lblMessageDerreur.setText(erreur.getMessage());
+					}
+				}
+			}
+		});
 		
 		JButton btnBoisson_9 = new JButton("Boisson 10");
 		btnBoisson_9.setEnabled(false);
 		btnBoisson_9.setBounds(363, 142, 100, 23);
 		panel.add(btnBoisson_9);
+		btnBoisson_9.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{	
+				if (rdbtnAjouter.isSelected() == true)
+				{
+					try
+					{
+						t1.ajouter(boisson10, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
+					}
+					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
+					{
+						lblMessageDerreur.setText(erreur.getMessage());
+					}
+				}
+				else if (rdbtnEnlever.isSelected() == true)
+				{
+					try
+					{
+						t1.enlever(boisson10, Integer.parseInt(textField.getText()));
+						textPane.setText(t1.afficherTicket());
+					}
+					catch (BoissonInvalideException | QuantiteNegativeException | ListeVideException erreur)
+					{
+						lblMessageDerreur.setText(erreur.getMessage());
+					}
+				}
+			}
+		});
 		
-		JButton btnImprimerTicket = new JButton("Imprimer le Ticket");
+		JButton btnImprimerTicket = new JButton("Imprimer le Ticket en .txt");
 		btnImprimerTicket.setBounds(363, 210, 261, 23);
 		panel.add(btnImprimerTicket);
+		btnImprimerTicket.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
+				
+			}
+		});
 		
 		JLabel lblQuantit = new JLabel("Quantit\u00E9 : ");
 		lblQuantit.setBounds(194, 120, 89, 14);
@@ -250,7 +508,7 @@ public class Table_1 extends Liste_De_Boissons{
 				}
 				if (boisson4.nom != null)
 				{
-					btnBoisson_3.setText(boisson3.getNom());
+					btnBoisson_3.setText(boisson4.getNom());
 					btnBoisson_3.setEnabled(true);
 				}
 				else if (boisson4.nom == null)

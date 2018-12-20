@@ -135,10 +135,10 @@ public class TicketCaisse
 	{
 		Node courant = this.head.next;
 		double montantTotal = 0;
-		String ticket = "Impression du ticket" + "\n" + "\n" + "Client : " + this.head.nom.getNom() + "\n" + "\n";
+		String ticket = "Impression du ticket" + "\n" + "\n" + this.head.nom + "\n" + "\n";
 		if (this.estVide())
 		{
-			System.out.println(ticket + "\n" + "Nom : ... \nPrix unitaire : 0€ \nTVA : 0% \nQuantité : 0 \nPrix Total TVAC : 0€ \n\n" + "Vous avez " + taille + " consommations" + "\n" + "Pour un montant total de : 0.00 €" + "\n" + "\n" + "Impression terminée" + "\n" + "-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_" + "\n");
+			System.out.println(ticket + "\n" + "Nom : ... \nPrix unitaire : 0€ \nTVA : 0% \nQuantité : 0 \nPrix Total TVAC : 0€ \n\n" + "Vous avez " + taille + " consommations" + "\n" + "Pour un montant total de : 0.00 €" + "\n" + "\n" + "Impression terminée" + "\n");
 			throw new ListeVideException ("Le ticket est vide, veuillez en recréer un si vous désirez ajouter des consommations à un client");
 		}
 		else
@@ -150,7 +150,7 @@ public class TicketCaisse
 	             courant = courant.next;
 				}
 		}
-		ticket = ticket + "Vous avez " + taille + " consommation(s) différente(s)" + "\n" + "Pour un montant total de : " + (double)Math.round(montantTotal*100)/100 + " €" + "\n" + "\n" + "Impression terminée" + "\n" + "-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_" + "\n";
+		ticket = ticket + "Vous avez " + taille + " consommation(s) différente(s)" + "\n" + "Pour un montant total de : " + (double)Math.round(montantTotal*100)/100 + " €" + "\n" + "\n" + "Impression terminée" + "\n";
 		System.out.println(ticket);
 		return ticket;
 	}

@@ -8,7 +8,6 @@ public class Main {
 		BoissonEtendue biere = new BoissonEtendue ("Bière", 2.00, 0.21, 1);
 		TicketCaisse v = new TicketCaisse("Victor");
 		System.out.println(v);
-		TicketCaisse y = new TicketCaisse("Victor");
 		try
 		{
 			v.ajouter(coca, 1);

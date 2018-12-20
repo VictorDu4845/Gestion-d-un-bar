@@ -316,7 +316,8 @@ public class Interface_Graphique{
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				String nom = textField.getText();
+				String nom = textField.getText().toString();
+				TicketCaisse.Node next = null;
 				
 				if (nom.isEmpty())
 				{
@@ -334,7 +335,7 @@ public class Interface_Graphique{
 						if (table1 == false)
 						{
 							label_1.setText("");
-							t1 = new TicketCaisse(nom);
+							TicketCaisse t1 = new TicketCaisse(nom);
 							btnNewButton_1.setText(nom);
 							btnNewButton_1.setEnabled(true);
 							nom1 = nom;
