@@ -1,6 +1,8 @@
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.net.UnknownHostException;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -92,13 +94,19 @@ public class Interface_Graphique{
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
+	public static void main(String[] args) 
+	{
+		EventQueue.invokeLater(new Runnable() 
+		{
+			public void run() 
+			{
+				try 
+				{
 					Interface_Graphique window = new Interface_Graphique();
 					window.frame.setVisible(true);
-				} catch (Exception e) {
+				} 
+				catch (Exception e) 
+				{
 					e.printStackTrace();
 				}
 			}
@@ -110,6 +118,7 @@ public class Interface_Graphique{
 	 */
 	public Interface_Graphique() {
 		initialize();
+		this.frame.setVisible(true);
 	}
 
 	/**
@@ -117,7 +126,7 @@ public class Interface_Graphique{
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 550, 420);
+		frame.setBounds(100, 100, 585, 420);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JPanel panel = new JPanel();
@@ -693,19 +702,52 @@ public class Interface_Graphique{
 		}
 		});
 		
+		ButtonGroup bg2 = new ButtonGroup();
+		
+		JRadioButton rdbtnCaisse = new JRadioButton("Caisse");
+		rdbtnCaisse.setSelected(true);
+		rdbtnCaisse.setBackground(Color.PINK);
+		rdbtnCaisse.setBounds(347, 195, 78, 23);
+		panel.add(rdbtnCaisse);
+		bg2.add(rdbtnCaisse);
+		
+		JRadioButton rdbtnEmploy = new JRadioButton("Employ\u00E9");
+		rdbtnEmploy.setBackground(Color.PINK);
+		rdbtnEmploy.setBounds(445, 195, 78, 23);
+		panel.add(rdbtnEmploy);
+		bg2.add(rdbtnEmploy);
+		
 		JButton btnNewButton_10 = new JButton("Ouvrir le Chat");
-		btnNewButton_10.setBounds(347, 190, 176, 23);
+		btnNewButton_10.setBounds(347, 135, 176, 23);
 		panel.add(btnNewButton_10);
 		btnNewButton_10.addActionListener(new ActionListener() 
 		{
-			public void actionPerformed(ActionEvent e) 
+			public void actionPerformed(ActionEvent e)
 			{
-				Interface_Chat chat = new Interface_Chat();
+				if (rdbtnCaisse.isSelected() == true)
+				{
+					try {
+						Interface_Chat_Caisse chatCaisse = new Interface_Chat_Caisse();
+					} catch (UnknownHostException e1) {
+						e1.printStackTrace();
+					} catch (IOException e1) {
+						e1.printStackTrace();
+					}
+
+				}
+				if (rdbtnEmploy.isSelected() == true)
+				{
+					try {
+						Interface_Chat_Employe chatEmploye = new Interface_Chat_Employe();
+					} catch (IOException e1) {
+						e1.printStackTrace();
+					}
+				}
 		}
 		});
 		
 		JButton btnOuvrirLeMenu = new JButton("Ouvrir le menu Boissons");
-		btnOuvrirLeMenu.setBounds(347, 164, 177, 23);
+		btnOuvrirLeMenu.setBounds(347, 109, 177, 23);
 		panel.add(btnOuvrirLeMenu);btnOuvrirLeMenu.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
@@ -717,6 +759,10 @@ public class Interface_Graphique{
 		JButton btnQuitterLapplication = new JButton("Quitter l'application");
 		btnQuitterLapplication.setBounds(371, 345, 152, 23);
 		panel.add(btnQuitterLapplication);
+		
+		JLabel lblDabordOuvrirLe = new JLabel("D'abord ouvrir le Chat \"Caisse\" !");
+		lblDabordOuvrirLe.setBounds(347, 169, 212, 14);
+		panel.add(lblDabordOuvrirLe);
 		btnQuitterLapplication.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
@@ -724,5 +770,6 @@ public class Interface_Graphique{
 				System.exit(0);
 		}
 		});
+		
 	}
 }

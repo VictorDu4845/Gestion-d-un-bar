@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 import java.awt.Font;
 
-public class Liste_De_Boissons extends Interface_Graphique{
+public class Liste_De_Boissons {
 
 	private JFrame frame;
 	private JTextField textField;
