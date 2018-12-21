@@ -1,13 +1,11 @@
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.*;
 import java.lang.Integer;
 
 import javax.swing.JFrame;
 import java.awt.Color;
 import javax.swing.JTextField;
-import java.awt.BorderLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JButton;
@@ -53,10 +51,13 @@ public class Liste_De_Boissons extends Interface_Graphique{
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				try {
+				try 
+				{
 					Liste_De_Boissons window = new Liste_De_Boissons();
 					window.frame.setVisible(true);
-				} catch (Exception e) {
+				} 
+				catch (Exception e) 
+				{
 					e.printStackTrace();
 				}
 			}
@@ -66,15 +67,16 @@ public class Liste_De_Boissons extends Interface_Graphique{
 	/**
 	 * Create the application.
 	 */
-	public Liste_De_Boissons() {
+	public Liste_De_Boissons() 
+	{
 		initialize();
 		this.frame.setVisible(true);
 	}
-
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	private void initialize() 
+	{
 		frame = new JFrame();
 		frame.setBounds(100, 100, 550, 420);
 		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -258,6 +260,66 @@ public class Liste_De_Boissons extends Interface_Graphique{
 		JLabel lblPrix_9 = new JLabel("");
 		lblPrix_9.setBounds(211, 356, 46, 14);
 		panel.add(lblPrix_9);
+		
+		if (boisson1 != null)
+		{
+			lblBoisson_a.setText(boisson1.getNom());
+			lblPrix_a.setText(boisson1.getPrix() + " €");
+		}
+		
+		if (boisson2 != null)
+		{
+			lblBoisson_1.setText(boisson2.getNom());
+			lblPrix_1.setText(boisson2.getPrix() + " €");
+		}
+		
+		if (boisson3 != null)
+		{
+			lblBoisson_2.setText(boisson3.getNom());
+			lblPrix_2.setText(boisson3.getPrix() + " €");
+		}
+		
+		if (boisson4 != null)
+		{
+			lblBoisson_3.setText(boisson4.getNom());
+			lblPrix_3.setText(boisson4.getPrix() + " €");
+		}
+		
+		if (boisson5 != null)
+		{
+			lblBoisson_4.setText(boisson5.getNom());
+			lblPrix_4.setText(boisson5.getPrix() + " €");
+		}
+		
+		if (boisson6 != null)
+		{
+			lblBoisson_5.setText(boisson6.getNom());
+			lblPrix_5.setText(boisson6.getPrix() + " €");
+		}
+		
+		if (boisson7 != null)
+		{
+			lblBoisson_6.setText(boisson7.getNom());
+			lblPrix_6.setText(boisson7.getPrix() + " €");
+		}
+		
+		if (boisson8 != null)
+		{
+			lblBoisson_7.setText(boisson8.getNom());
+			lblPrix_7.setText(boisson8.getPrix() + " €");
+		}
+		
+		if (boisson9 != null)
+		{
+			lblBoisson_8.setText(boisson9.getNom());
+			lblPrix_8.setText(boisson9.getPrix() + " €");
+		}
+		
+		if (boisson10 != null)
+		{
+			lblBoisson_9.setText(boisson10.getNom());
+			lblPrix_9.setText(boisson10.getPrix() + " €");
+		}
 		
 		JButton btnSupprimer = new JButton("Supprimer");
 		btnSupprimer.setBounds(264, 127, 110, 23);

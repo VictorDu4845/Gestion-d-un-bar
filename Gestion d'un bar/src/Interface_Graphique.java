@@ -710,8 +710,7 @@ public class Interface_Graphique{
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				Liste_De_Boissons liste = new Liste_De_Boissons();
-				
+				Liste_De_Boissons liste = new Liste_De_Boissons();	
 		}
 		});
 		
@@ -723,11 +722,7 @@ public class Interface_Graphique{
 			public void actionPerformed(ActionEvent e) 
 			{
 				System.exit(0);
-				
 		}
 		});
-
-		
-
 	}
 }

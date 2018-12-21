@@ -19,7 +19,8 @@ import javax.swing.JTextField;
 import java.awt.Font;
 import javax.swing.JScrollPane;
 
-public class Table_4{
+public class Table_4
+{
 
 	public JFrame frame;
 	private JTextField textField;
@@ -27,13 +28,19 @@ public class Table_4{
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
+	public static void main(String[] args) 
+	{
+		EventQueue.invokeLater(new Runnable() 
+		{
+			public void run()
+			{
+				try 
+				{
 					Table_4 window = new Table_4();
 					window.frame.setVisible(true);
-				} catch (Exception e) {
+				} 
+				catch (Exception e) 
+				{
 					e.printStackTrace();
 				}
 			}
@@ -43,7 +50,8 @@ public class Table_4{
 	/**
 	 * Create the application.
 	 */
-	public Table_4() {
+	public Table_4() 
+	{
 		initialize();
 		this.frame.setVisible(true);
 	}
@@ -51,7 +59,8 @@ public class Table_4{
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	public void initialize() {
+	public void initialize() 
+	{
 		ButtonGroup ajouterEnlever = new ButtonGroup( );
 		
 		frame = new JFrame();
@@ -501,6 +510,107 @@ public class Table_4{
 				}
 			}
 		});
+		
+		if (Liste_De_Boissons.boisson1.nom != null)
+		{
+			btnBoisson.setText(Liste_De_Boissons.boisson1.getNom());
+			btnBoisson.setEnabled(true);
+		}
+		else if (Liste_De_Boissons.boisson1.nom == null)
+		{
+			btnBoisson.setText("Boisson 1");
+			btnBoisson.setEnabled(false);
+		}
+		if (Liste_De_Boissons.boisson2.nom != null)
+		{
+			btnBoisson_1.setText(Liste_De_Boissons.boisson2.getNom());
+			btnBoisson_1.setEnabled(true);
+		}
+		else if (Liste_De_Boissons.boisson2.nom == null)
+		{
+			btnBoisson_1.setText("Boisson 2");
+			btnBoisson_1.setEnabled(false);
+		}
+		if (Liste_De_Boissons.boisson3.nom != null)
+		{
+			btnBoisson_2.setText(Liste_De_Boissons.boisson3.getNom());
+			btnBoisson_2.setEnabled(true);
+		}
+		else if (Liste_De_Boissons.boisson3.nom == null)
+		{
+			btnBoisson_2.setText("Boisson 3");
+			btnBoisson_2.setEnabled(false);
+		}
+		if (Liste_De_Boissons.boisson4.nom != null)
+		{
+			btnBoisson_3.setText(Liste_De_Boissons.boisson4.getNom());
+			btnBoisson_3.setEnabled(true);
+		}
+		else if (Liste_De_Boissons.boisson4.nom == null)
+		{
+			btnBoisson_3.setText("Boisson 4");
+			btnBoisson_3.setEnabled(false);
+		}
+		if (Liste_De_Boissons.boisson5.nom != null)
+		{
+			btnBoisson_4.setText(Liste_De_Boissons.boisson5.getNom());
+			btnBoisson_4.setEnabled(true);
+		}
+		else if (Liste_De_Boissons.boisson5.nom == null)
+		{
+			btnBoisson_4.setText("Boisson 5");
+			btnBoisson_4.setEnabled(false);
+		}
+		if (Liste_De_Boissons.boisson6.nom != null)
+		{
+			btnBoisson_5.setText(Liste_De_Boissons.boisson6.getNom());
+			btnBoisson_5.setEnabled(true);
+		}
+		else if (Liste_De_Boissons.boisson6.nom == null)
+		{
+			btnBoisson_5.setText("Boisson 6");
+			btnBoisson_5.setEnabled(false);
+		}
+		if (Liste_De_Boissons.boisson7.nom != null)
+		{
+			btnBoisson_6.setText(Liste_De_Boissons.boisson7.getNom());
+			btnBoisson_6.setEnabled(true);
+		}
+		else if (Liste_De_Boissons.boisson7.nom == null)
+		{
+			btnBoisson_6.setText("Boisson 7");
+			btnBoisson_6.setEnabled(false);
+		}
+		if (Liste_De_Boissons.boisson8.nom != null)
+		{
+			btnBoisson_7.setText(Liste_De_Boissons.boisson8.getNom());
+			btnBoisson_7.setEnabled(true);
+		}
+		else if (Liste_De_Boissons.boisson8.nom == null)
+		{
+			btnBoisson_7.setText("Boisson 8");
+			btnBoisson_7.setEnabled(false);
+		}
+		if (Liste_De_Boissons.boisson9.nom != null)
+		{
+			btnBoisson_8.setText(Liste_De_Boissons.boisson9.getNom());
+			btnBoisson_8.setEnabled(true);
+		}
+		else if (Liste_De_Boissons.boisson9.nom == null)
+		{
+			btnBoisson_8.setText("Boisson 9");
+			btnBoisson_8.setEnabled(false);
+		}
+		if (Liste_De_Boissons.boisson10.nom != null)
+		{
+			btnBoisson_9.setText(Liste_De_Boissons.boisson10.getNom());
+			btnBoisson_9.setEnabled(true);
+		}
+		else if (Liste_De_Boissons.boisson10.nom == null)
+		{
+			btnBoisson_9.setText("Boisson 10");
+			btnBoisson_9.setEnabled(false);
+		}
 		
 		JLabel lblQuantit = new JLabel("Quantit\u00E9 : ");
 		lblQuantit.setBounds(194, 120, 89, 14);
