@@ -40,6 +40,10 @@ public class Interface_Chat_Employe extends JFrame implements ActionListener {
     	panel.setBackground(Color.PINK);
         panel.setLayout(null);
     	
+    	lblChatctEmploy = new JLabel("Chat (c\u00F4t\u00E9 Employ\u00E9) :");
+    	lblChatctEmploy.setBounds(10, 11, 460, 14);
+    	panel.add(lblChatctEmploy);
+    	
     	textField = new JTextField();
     	textField.setBounds(10, 400, 350, 30);
         panel.add(textField);
@@ -63,7 +67,7 @@ public class Interface_Chat_Employe extends JFrame implements ActionListener {
         		    public void actionPerformed(ActionEvent e) {
         		        if ((e.getSource() == button) && (textField.getText() != "")) {
 
-        		            textArea.setText(textArea.getText() + '\n' + "User:"
+        		            textArea.setText(textArea.getText() + '\n' + "Employé :"
         		                    + textField.getText());
         		            try {
         		                DataOutputStream donnéesOut = new DataOutputStream(
@@ -87,10 +91,6 @@ public class Interface_Chat_Employe extends JFrame implements ActionListener {
         employeSocket = new Socket(InetAddress.getLocalHost(), 2000);
 
         textArea.setText("Connecté à la Caisse");
-        
-        lblChatctEmploy = new JLabel("Chat (c\u00F4t\u00E9 Employ\u00E9) :");
-        lblChatctEmploy.setBounds(10, 11, 460, 14);
-        panel.add(lblChatctEmploy);
         while (true) {
             try {
                 DataInputStream donnéesIn = new DataInputStream(employeSocket.getInputStream());
@@ -110,6 +110,10 @@ public class Interface_Chat_Employe extends JFrame implements ActionListener {
         }
     }
 
-
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

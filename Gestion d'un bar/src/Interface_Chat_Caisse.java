@@ -43,6 +43,10 @@ public class Interface_Chat_Caisse extends JFrame implements ActionListener {
     	panel.setBackground(Color.PINK);
     	panel.setLayout(null);
     	
+    	JLabel lblChatctCaisse = new JLabel("Chat (c\u00F4t\u00E9 Caisse) :");
+    	lblChatctCaisse.setBounds(10, 11, 460, 14);
+    	panel.add(lblChatctCaisse);
+    	
     	textField = new JTextField();
     	textField.setBounds(10, 400, 350, 30);
         panel.add(textField);
@@ -93,15 +97,11 @@ public class Interface_Chat_Caisse extends JFrame implements ActionListener {
         textArea.setText("En attente d'Employé");
         employeSocket = caisseServer.accept();
         textArea.setText(textArea.getText() + '\n' + "Trouvé !");
-        
-        JLabel lblChatctCaisse = new JLabel("Chat (c\u00F4t\u00E9 Caisse) :");
-        lblChatctCaisse.setBounds(10, 11, 460, 14);
-        panel.add(lblChatctCaisse);
         while (true) {
             try {
                 DataInputStream donnéesIn = new DataInputStream(employeSocket.getInputStream());
                 String string = donnéesIn.readUTF();
-                textArea.setText(textArea.getText() + '\n' + "Client:"
+                textArea.setText(textArea.getText() + '\n' + "Employé :"
                         + string);
             } catch (Exception e1) {
                 textArea.setText(textArea.getText() + '\n'
@@ -115,6 +115,12 @@ public class Interface_Chat_Caisse extends JFrame implements ActionListener {
             }
         }
     }
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
 }
          
         
